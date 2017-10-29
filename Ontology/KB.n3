@@ -1,0 +1,758 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix mpc: <http://system.mentolog.org/classes/> .
+@prefix mpp: <http://system.mentolog.org/properties/> .
+@prefix mpr: <http://system.mentolog.org/resources/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:genid30732419 a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#label
+
+rdfs:label rdfs:label "Надпись"@ru .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+
+mpp:myshlenie a owl:ObjectProperty ;
+	rdfs:label "Содержание мышления"@ru .
+	
+mpp:svyazannyjKoncept a owl:ObjectProperty ;
+	rdfs:label "Связанный концепт"@ru .
+	
+	
+# http://system.mentolog.org/properties/daetProblemu
+
+mpp:daetProblemu a owl:ObjectProperty ;
+	rdfs:label "Создает проблему"@ru .
+	
+
+mpp:ustanovka a owl:ObjectProperty ;
+	rdfs:label "Связанная установка"@ru .
+# 
+# http://system.mentolog.org/properties/daetStrah
+
+mpp:daetStrah a owl:ObjectProperty ;
+	rdfs:label "Порождает страх"@ru .
+# 
+# http://system.mentolog.org/properties/daetVygodu
+
+mpp:daetVygodu a owl:ObjectProperty ;
+	rdfs:label "Дает выгоду"@ru .
+# 
+# http://system.mentolog.org/properties/kontekst
+
+mpp:kontekst a owl:ObjectProperty ;
+	rdfs:label "Принадлежит контексту"@ru .
+# 
+# http://system.mentolog.org/properties/prichina
+
+mpp:imeetPrichinoj a owl:ObjectProperty ;
+	rdfs:label "Имеет причиной"@ru .
+# 
+# http://system.mentolog.org/properties/protivorechit
+
+mpp:protivorechit a owl:ObjectProperty , owl:SymmetricProperty ;
+	rdfs:label "Противоречит"@ru .
+# 
+# http://system.mentolog.org/properties/sochetaetsya
+
+mpp:sochetaetsya a owl:ObjectProperty , owl:SymmetricProperty ;
+	rdfs:label "Сочетается с"@ru .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+
+
+mpp:prichina a owl:DatatypeProperty ;
+	rdfs:label "Имеет причиной"@ru .
+# 
+# http://system.mentolog.org/properties/rechovka
+
+mpp:rechovka a owl:DatatypeProperty ;
+	rdfs:label "Речовка"@ru .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://system.mentolog.org/classes/Koncept
+
+mpc:Koncept a owl:Class ;
+	rdfs:label "Концепт"@ru .
+	
+mpc:Myshlenie a owl:Class ;
+	rdfs:label "Содержание мышления"@ru .
+
+	
+# 
+# http://system.mentolog.org/classes/Kontekst
+
+mpc:Kontekst a owl:Class ;
+	rdfs:label "Контекст"@ru .
+# 
+# http://system.mentolog.org/classes/Povedenie
+
+mpc:Povedenie a owl:Class ;
+	rdfs:label "Поведение"@ru .
+# 
+# http://system.mentolog.org/classes/Problema
+
+mpc:Problema a owl:Class ;
+	rdfs:label "Проблема"@ru .
+# 
+# http://system.mentolog.org/classes/Strah
+
+mpc:Strah a owl:Class ;
+	rdfs:label "Страх"@ru .
+# 
+# http://system.mentolog.org/classes/Ustanovka
+
+mpc:Ustanovka a owl:Class ;
+	rdfs:label "Установка"@ru .
+# 
+# http://system.mentolog.org/classes/Vygoda
+
+mpc:Vygoda a owl:Class ;
+	rdfs:label "Выгода"@ru .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://system.mentolog.org/resources/bytLuchshim
+
+mpr:bytLuchshim a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstLuchshesti ;
+	mpp:protivorechit mpr:bytSoboj , mpr:lyudejNuzhnoLyubit , mpr:pravilno , mpr:pravoNaZhizn , mpr:predel , mpr:raznye ;
+	mpp:sochetaetsya mpr:bytSilnym , mpr:hotyatLuchshego , mpr:neRavny , mpr:poMoemu , mpr:razumny ;
+	mpp:rechovka "Кто первый, тот и прав"@ru , "Лучше быть первым на селе, чем последним при дворе"@ru , "Лучшие имеют право на все"@ru , "Плох тот солдат, что не мечтает стать генералом"@ru , "Пусть победит сильнейший"@ru ;
+	rdfs:label "Нужно быть лучшим"@ru .
+# 
+# http://system.mentolog.org/resources/bytMuzhchinoj
+
+mpr:bytMuzhchinoj a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstPola , mpr:kontekstSily ;
+	mpp:protivorechit mpr:bytSoboj ;
+	mpp:sochetaetsya mpr:bytSilnym , mpr:bytZhenshchinoj , mpr:poMoemu , mpr:vsemSvoboda ;
+	mpp:rechovka "За мужем, как за каменной стеной"@ru , "Мужик сказал — мужик сделал"@ru , "Мужчина слов на ветер не бросает"@ru , "Мужчины не плачут"@ru , "Путь к сердцу мужчины лежит через желудок"@ru ;
+	rdfs:label "Нужно быть мужчиной"@ru .
+# 
+# http://system.mentolog.org/resources/bytSilnym
+
+mpr:bytSilnym a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstSily ;
+	mpp:protivorechit mpr:bytSoboj , mpr:nichtozhen , mpr:pokoj ;
+	mpp:sochetaetsya mpr:bytLuchshim , mpr:bytMuzhchinoj , mpr:pravilno , mpr:vsemSvoboda ;
+	mpp:rechovka "Взялся за гуж - не говори, что не дюж"@ru , "Выживают только сильнейшие"@ru , "На Бога надейся, а сам не плошай"@ru , "Победителей не судят"@ru , "Пришел, увидел, победил"@ru , "Сильные правят миром"@ru ;
+	rdfs:label "Нужно быть сильным"@ru .
+# 
+# http://system.mentolog.org/resources/bytSoboj
+
+mpr:bytSoboj a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstDvizheniya , mpr:kontekstIstiny , mpr:kontekstSvobody ;
+	mpp:protivorechit mpr:bytLuchshim , mpr:bytMuzhchinoj , mpr:bytSilnym , mpr:bytZhenshchinoj , mpr:hotyatLuchshego ;
+	mpp:sochetaetsya mpr:estestvenno , mpr:raznye , mpr:vsemSvoboda ;
+	mpp:rechovka "Каждый др...т как он хочет"@ru , "Начни с себя"@ru , "Не иди за толпой"@ru , "Нужно принимать людей такими, как есть"@ru , "Оставайся такой, как есть"@ru ;
+	rdfs:label "Нужно быть собой"@ru .
+# 
+# http://system.mentolog.org/resources/bytZhenshchinoj
+
+mpr:bytZhenshchinoj a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstPola ;
+	mpp:protivorechit mpr:bytSoboj , mpr:dvizhenie , mpr:pravilno ;
+	mpp:sochetaetsya mpr:bytMuzhchinoj , mpr:estestvenno , mpr:neBytOdnomu , mpr:poMoemu , mpr:vseHotyatSchastya ;
+	mpp:rechovka "Женщина создана для красоты и любви"@ru , "Женщинам нужно уступать"@ru , "За каждым великим мужчиной стоит великая женщина"@ru , "Мужчина — голова, а женщина — шея"@ru , "Сила женщины в слабости"@ru ;
+	rdfs:label "Нужно быть женщиной"@ru .
+# 
+# http://system.mentolog.org/resources/dvizhenie
+
+mpr:dvizhenie a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstDvizheniya ;
+	mpp:protivorechit mpr:bytZhenshchinoj , mpr:istina , mpr:pokoj , mpr:predel , mpr:svyazano , mpr:vysshee ;
+	mpp:sochetaetsya mpr:hotyatLuchshego , mpr:neBytSlabym , mpr:nichtozhen , mpr:vsemSvoboda ;
+	mpp:rechovka "Вечный бой. Покой нам только снится"@ru , "Все проходит, и это пройдет"@ru , "Наш пострел везде поспел"@ru , "Никогда не говори никогда"@ru , "Хочешь жить – умей вертеться"@ru ;
+	rdfs:label "Все есть движение"@ru .
+# 
+# http://system.mentolog.org/resources/estPrichina
+
+mpr:estPrichina a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstPredskazuemosti , mpr:kontekstVlasti ;
+	mpp:sochetaetsya mpr:estestvenno , mpr:istina , mpr:nichtozhen , mpr:svyazano , mpr:vysshee ;
+	mpp:rechovka "Ничего не происходит просто так"@ru , "Скупой платит дважды"@ru , "Случайности не случайны"@ru , "У всего есть начало"@ru , "Что посеешь - то и пожнешь"@ru , "Яблоко от яблоки недалеко падает"@ru ;
+	rdfs:label "У всего есть причина"@ru .
+# 
+# http://system.mentolog.org/resources/estSmysl
+
+mpr:estSmysl a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstRazumnosti , mpr:kontekstVygody ;
+	mpp:protivorechit mpr:estestvenno , mpr:vsemSvoboda ;
+	mpp:sochetaetsya mpr:istina , mpr:nuzhnoVerit , mpr:pokoj , mpr:pravilno , mpr:pravoNaZhizn , mpr:predel , mpr:razumny , mpr:svyazano , mpr:vysshee ;
+	mpp:rechovka "Все должно быть не зря"@ru , "Всё, что ни делается – всё к лучшему"@ru , "День прожит не зря"@ru , "Не пропадать же добру"@ru , "Просто так даже кошки не рожают"@ru , "С паршивой овцы хоть шерсти клок"@ru ;
+	rdfs:label "Во всем есть смысл"@ru .
+# 
+# http://system.mentolog.org/resources/estestvenno
+
+mpr:estestvenno a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstPrirodnosti ;
+	mpp:protivorechit mpr:estSmysl , mpr:istina , mpr:pravilno , mpr:razumny ;
+	mpp:sochetaetsya mpr:bytSoboj , mpr:bytZhenshchinoj , mpr:estPrichina , mpr:hotyatLuchshego , mpr:nichtozhen , mpr:pokoj , mpr:predel , mpr:prosto , mpr:vseHotyatSchastya ;
+	mpp:rechovka "Война войной, а обед по расписанию"@ru , "Имидж ничто, жажда все"@ru , "Против природы не попрешь"@ru , "Человек — социальное животное"@ru , "Что естественно, то не безобразно"@ru , "Это же естественно, природой заложено"@ru ;
+	rdfs:label "Все должно быть естественно"@ru .
+# 
+# http://system.mentolog.org/resources/hotyatLuchshego
+
+mpr:hotyatLuchshego a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstVygody ;
+	mpp:protivorechit mpr:bytSoboj , mpr:neBytOdnomu , mpr:pravilno , mpr:predel , mpr:prosto ;
+	mpp:sochetaetsya mpr:bytLuchshim , mpr:dvizhenie , mpr:estestvenno , mpr:lyudejNuzhnoLyubit , mpr:vseHotyatSchastya ;
+	mpp:rechovka "Бери от жизни только лучшее"@ru , "Зачем жить хорошо, если можно лучше?"@ru , "Плох тот солдат, который не мечтает стать генералом"@ru , "После нас хоть потоп"@ru , "Рыба ищет, где глубже, а человек, где лучше"@ru , "Убить двух зайцев"@ru ;
+	mpp:svyazannyjKoncept mpr:luchshe;
+	rdfs:label "Все хотят лучшего"@ru .
+# 
+# http://system.mentolog.org/resources/istina
+
+mpr:istina a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstIstiny ;
+	mpp:protivorechit mpr:dvizhenie , mpr:estestvenno ;
+	mpp:sochetaetsya mpr:estPrichina , mpr:estSmysl , mpr:nuzhnoVerit , mpr:pravilno , mpr:razumny , mpr:vysshee ;
+	mpp:rechovka "В тихом омуте черти водятся"@ru , "Встречают по одёжке, а провожают по уму"@ru , "Глаза - зеркало души"@ru , "Доверяй, но проверяй"@ru , "Ложь во благо"@ru , "Мал золотник, да дорог"@ru , "Мал клоп да вонюч"@ru , "На воре шапка горит"@ru , "Не всё то золото, что блестит"@ru , "Нечего на зеркало пенять, коль рожа крива"@ru , "Семь раз отмерь - один отрежь"@ru ;
+	rdfs:label "Нужно стремиться к истине"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstDvizheniya
+
+mpr:kontekstDvizheniya a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Вечный бой. Покой нам только снится"@ru , "Много хочешь -- мало получишь"@ru , "Наш пострел везде поспел"@ru , "Не жили богато, нех... начинать"@ru , "Никогда не говори никогда"@ru ;
+	rdfs:label "Контекст движения"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstIstiny
+
+mpr:kontekstIstiny a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "В тихом омуте черти водятся"@ru , "Встречают по одёжке, а провожают по уму"@ru , "Глаза - зеркало души"@ru , "Доверяй, но проверяй"@ru , "Ложь во благо"@ru , "Мал золотник, да дорог"@ru , "Мал клоп да вонюч"@ru , "Не всё то золото, что блестит"@ru , "Нечего на зеркало пенять, коль рожа крива"@ru , "Семь раз отмерь - один отрежь"@ru , "Хоть горшком назови - только в печь не ставь"@ru ;
+	rdfs:label "Контекст истины"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstKonechnosti
+
+mpr:kontekstKonechnosti a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Береги честь смолоду"@ru , "Всему есть предел"@ru , "Куй железо, пока горячо"@ru , "Сколько веревочке ни виться, кончику быть"@ru ;
+	rdfs:label "Контекст конечности"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstLuchshesti
+
+mpr:kontekstLuchshesti a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Волос долгий, ум короткий"@ru , "Дуракам везёт"@ru , "Кто с мечом к нам придет от меча и погибнет"@ru , "Курица – не птица, баба – не человек"@ru , "На дураков не обижаются"@ru , "Сами с усами"@ru , "Собака лает - караван идет"@ru , "Что русскому хорошо, то немцу смерть"@ru , "Широкая русская душа (таинственная и непонятная)"@ru , "Яйца курицу не учат"@ru ;
+	rdfs:comment "Это о превосходстве кого-то над кем-то, кто-то лучше кого-то"@ru;
+	rdfs:label "Контекст лучшести"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstOtnoshenij
+
+mpr:kontekstOtnoshenij a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Бьет -- значит любит"@ru , "В тесноте, да не в обиде"@ru , "Два сапога пара"@ru , "До трех раз прощай!"@ru , "Если друг оказался вдруг"@ru , "Легкую вину прощают."@ru , "Любить – значит жалеть"@ru , "Милые бранятся -- только тешутся"@ru , "Не отрекаются любя"@ru , "Невольная ошибка прощается"@ru , "Нужно принимать человека, таким какой он есть"@ru , "Один в поле не воин"@ru , "Относись к людям так как к самому себе"@ru , "Путь к сердцу мужчины лежит через желудок"@ru , "С милым рай и в шалаше"@ru , "Скажи мне, кто твой друг, и я скажу, кто ты"@ru , "Старый друг лучше новых двух"@ru ;
+	rdfs:label "Контекст отношений"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstOtvetstvennosti
+
+mpr:kontekstOtvetstvennosti a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Взялся за гуж - не говори что не дюж"@ru , "За Державу обидно..."@ru , "Любишь кататься - люби и саночки возить"@ru , "Любопытной Варваре на базаре нос оторвали"@ru , "На Бога надейся, а сам не плошай"@ru , "На авось надейся, а сам не плошай"@ru , "На воре шапка горит"@ru , "Назвался груздем - полезай в кузов"@ru , "Не отрекаются любя"@ru , "Не рой другому яму - сам в неё попадёшь"@ru , "Одна голова - хорошо, а две - лучше"@ru , "От горшка два вершка, а уже дом в руках держит"@ru , "Первый блин комом"@ru , "После нас хоть потоп"@ru , "Приедет барин - нас рассудит..."@ru , "Пусть лошадь думает - у нее голова большая"@ru , "Своя голова на плечах"@ru , "Сделал дело -- гуляй смело"@ru , "Спасение утопающих дело рук самих утопающих"@ru , "У семи нянек дитя без глазу"@ru , "Утро вечера мудреней"@ru , "Хозяин - барин"@ru , "Хочется, да колется"@ru ;
+	rdfs:label "Контекст ответственности"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstPokoya
+
+mpr:kontekstPokoya a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "А в тюрьме щас ужин, макароны"@ru , "Баба с возу -- кобыле легче"@ru , "Бежать впереди паровоза"@ru , "Вечный бой. Покой нам только снится"@ru , "Горе от ума"@ru , "Для бешеной собаки сто километров не круг"@ru , "Лучше плохо ехать, чем хорошо идти"@ru , "Не было заботы -- купила баба порося"@ru , "Не жили богато, нех... начинай"@ru , "Ниже травы, тише воды"@ru , "Работа -- не волк, в лес не убежит"@ru , "Тише едешь -- дальше будешь"@ru , "Худой мир лучше доброй ссоры"@ru , "Чем бы дитя ни тешилось, лишь бы не плакало"@ru ;
+	rdfs:label "Контекст покоя"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstPola
+
+mpr:kontekstPola a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Сила женщины в слабости"@ru ;
+	rdfs:label "Контекст пола"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstPravilnogo
+
+mpr:kontekstPravilnogo a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Береги честь смолоду"@ru , "В чужой монастырь со своим уставом не ходят"@ru , "Всему свое время"@ru , "Делу время -- потехе час"@ru , "Дружба дружбой, а табачок врозь (а служба службой)"@ru , "Наглость -- второе счастье"@ru , "Не в силе Бог, а в правде"@ru , "Нет бумажки - нет человека"@ru , "Обещанного три года ждут"@ru , "Семеро одного не ждут"@ru ;
+	rdfs:label "Контекст правильного"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstPredskazuemosti
+
+mpr:kontekstPredskazuemosti a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "В тихом омуте черти водятся"@ru , "Готовь сани летом, а телегу зимой"@ru , "Дуракам везёт"@ru , "Каков поп - такой и приход"@ru , "Много хочешь - мало получишь"@ru , "На воре шапка горит"@ru , "Не говори гоп, пока не перепрыгнешь"@ru , "Не зная броду, не суйся в воду"@ru , "Не плюй в колодец – потом пригодится"@ru , "Не рой другому яму - сам в неё попадёшь"@ru , "Никогда не говори никогда"@ru , "От тюрьмы да от сумы не зарекайся"@ru , "Пуля дура - штык молодец"@ru , "Скажи мне, кто твой друг, и я скажу, кто ты"@ru , "Сколько веревочке ни виться, а кончику быть"@ru , "Скупой платит дважды"@ru , "Сон в руку"@ru , "Хорошо смеется тот, кто смеется последним"@ru , "Человек предполагает, а Бог располагает"@ru , "Что посеешь - то и пожнешь"@ru , "Яблоко от яблони недалеко падает"@ru ;
+	rdfs:label "Контекст предсказуемости"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstPrirodnosti
+
+mpr:kontekstPrirodnosti a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Война войной, а обед по расписанию"@ru , "Все полезно, что в рот полезло"@ru , "Делу время, потехе час"@ru , "Имидж ничто, жажда все"@ru , "Лучше плохо ехать, чем хорошо идти"@ru , "На седьмом небе от счастья"@ru , "Пиво без водки - деньги на ветер"@ru , "Против природы не попрешь"@ru , "Путь к сердцу мужчины лежит через желудок"@ru , "Работа - не волк, в лес не убежит"@ru , "Уплетать за обе щеки"@ru , "Хочется, да колется"@ru , "Человек — социальное животное"@ru , "Что естественно, то не безобразно"@ru , "Это же естественно, природой заложено"@ru ;
+	rdfs:label "Контекст природности"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstProstoty
+
+mpr:kontekstProstoty a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Без труда не вынуть и рыбку из пруда"@ru , "Будь проще и люди к тебе потянутся"@ru , "Горячее сырым не бывает"@ru , "Живи просто — проживешь лет сто"@ru , "Как свои пять пальцев"@ru , "Кто не работает, тот не ест"@ru , "Лучшее решение из возможных — самое простое"@ru , "Наглость -- второе счастье"@ru , "Не ищи мудрости, ищи простоты"@ru , "Не потопаешь -- не полопаешь"@ru , "Под лежачий камень вода не течет"@ru , "Пусть лошадь думает: у нее голова большая"@ru , "Убить двух зайцев"@ru , "Украл, выпил -- в тюрьму"@ru ;
+	rdfs:label "Контекст простоты"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstRazumnosti
+
+mpr:kontekstRazumnosti a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Без царя в голове"@ru , "Встречают по одежке, а провожают по уму"@ru , "Готовь сани летом, а телегу зимой"@ru , "Для бешеной собаки сто километров не круг"@ru , "Дуракам везет"@ru , "Заставь дурака Богу молиться -- он и лоб расшибет"@ru , "Копейка рубль бережет"@ru , "Куй железо, пока горячо"@ru , "На дураков не обижаются"@ru , "Не зная броду, не суйся в воду"@ru , "Не плюй в колодец: потом пригодится"@ru , "Нет ума -- иди работать"@ru , "Нечего на зеркало пенять, коль рожа крива"@ru , "Своя голова на плечах"@ru , "Собака лает -- караван идет"@ru , "Тише едешь -- дальше будешь"@ru , "Умом Россию не понять..."@ru ;
+	rdfs:label "Контекст разумности"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstSily
+
+mpr:kontekstSily a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Волков бояться - в лес не ходить"@ru , "Добро должно быть с кулаками"@ru , "Сила есть - ума не надо"@ru , "Собака лает - караван идет"@ru , "Соберись, тряпка!"@ru ;
+	rdfs:label "Контекст силы"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstSpravedlivosti
+
+mpr:kontekstSpravedlivosti a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Бог не Тимошка - видит немножко"@ru , "Вольному - воля, спасенному - рай"@ru , "Дуракам везёт"@ru , "Кто не работает, тот не ест"@ru , "Кто первый встал, тому и тапки"@ru , "Не потопаешь - не полопаешь"@ru , "Не рой другому яму - сам в неё попадёшь"@ru , "Относись к людям так как к самому себе"@ru , "Семеро одного не ждут"@ru , "Сколько веревочке ни виться, кончику быть"@ru , "Ты мне - я тебе. (Баш на баш)"@ru ;
+	rdfs:label "Контекст справедливости"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstSvobody
+
+mpr:kontekstSvobody a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Жить в четырех стенах"@ru , "Каждый др...т как он хочет"@ru , "На все четыре стороны"@ru , "Не любо -- не слушай. А врать не мешай"@ru , "Пиво без водки -- деньги на ветер"@ru , "Работа -- не волк, в лес не убежит"@ru , "Сделал дело -- гуляй смело"@ru ;
+	rdfs:label "Контекст свободы"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstUnikalnosti
+
+mpr:kontekstUnikalnosti a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Кошка скребёт на свой хребёт"@ru , "Мал золотник, да дорог"@ru , "Много хочешь - мало получишь"@ru , "Ниже травы, тише воды"@ru , "Умом Россию не понять..."@ru , "Я - последняя буква в алфавите!"@ru ;
+	rdfs:label "Контекст уникальности"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstVlasti
+
+mpr:kontekstVlasti a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Бьет -- значит любит"@ru , "Всему своё время"@ru , "Всяк сверчок знай свой шесток"@ru , "Закон, что дышло: куда повернул, туда и вышло"@ru , "Куй железо, пока горячо"@ru , "Молчание - знак согласия"@ru , "Муж – голова, жена - шея"@ru , "На Бога надейся, а сам не плошай"@ru , "На авось надейся, а сам не плошай"@ru , "На каждый роток не накинешь платок"@ru , "Не подмажешь – не поедешь"@ru , "Нет бумажки - нет человека"@ru , "От тюрьмы да от сумы не зарекайся"@ru , "Приедет барин - нас рассудит…"@ru , "Против лома нет приёма"@ru , "Сила есть - ума не надо"@ru , "Спасение утопающих дело рук самих утопающих"@ru , "Хочешь жить -- умей вертеться"@ru , "Человек предполагает, а Бог располагает"@ru , "Я - последняя буква в алфавите!"@ru , "Яблоко от яблони недалеко падает"@ru ;
+	rdfs:label "Контекст власти"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstVoli
+
+mpr:kontekstVoli a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Без труда не вынуть и рыбку из пруда"@ru , "Всему своё время"@ru , "Глаза боятся, руки делают"@ru , "Для бешеной собаки сто километров не круг"@ru , "Дорогу осилит идущий"@ru , "Закон, что дышло: куда повернул, туда и вышло"@ru , "Кто с мечом к нам придет от меча и погибнет"@ru , "Муж – голова, жена - шея"@ru , "На каждый роток не накинешь платок"@ru , "От горшка два вершка, а уже дом в руках держит"@ru , "Под лежащий камень вода не течет"@ru , "Пуля дура - штык молодец"@ru , "Семь раз отмерь - один отрежь"@ru , "Терпение и труд все перетрут"@ru , "Утро вечера мудреней"@ru , "Хозяин - барин"@ru , "Хорошо смеется тот, кто смеется последним"@ru , "Чем дальше в лес, тем больше дров"@ru ;
+	rdfs:label "Контекст воли"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstVygody
+
+mpr:kontekstVygody a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "В большой семье не щелкай клювом"@ru , "В тесноте, да не в обиде"@ru , "Волков бояться - в лес не ходить"@ru , "Все полезно, что в рот полезло"@ru , "Готовь сани летом, а телегу зимой"@ru , "Дружба дружбой, а табачок врозь (а служба службой)"@ru , "Закон, что дышло: куда повернул, туда и вышло"@ru , "Копейка рубль бережет"@ru , "Кто не рискует, тот не пьет шампанского"@ru , "Кто первый встал, тому и тапки"@ru , "Лес рубят- щепки летят"@ru , "Ложь во благо"@ru , "Лучше синица в руках, чем журавль в небе"@ru , "Много хочешь - мало получишь"@ru , "Не в деньгах счастье"@ru , "Не жили богато, не х.. начинать"@ru , "Не любо - не слушай. А врать не мешай"@ru , "Не плюй в колодец – потом пригодится"@ru , "Не подмажешь - не поедешь"@ru , "От добра добра не ищут"@ru , "После нас хоть потоп"@ru , "С паршивой овцы хоть шерсти клок"@ru , "Свято место пусто не бывает"@ru , "Сидеть меж двух стульев"@ru , "Скупой платит дважды"@ru , "Ты мне - я тебе. (Баш на баш)"@ru , "Убить двух зайцев"@ru , "Хоть горшком назови - только в печь не ставь"@ru , "Хочешь жить -- умей вертеться"@ru , "Чем дальше в лес, тем больше дров"@ru ;
+	rdfs:label "Контекст выгоды"@ru .
+# 
+# http://system.mentolog.org/resources/kontekstVysshego
+
+mpr:kontekstVysshego a owl:NamedIndividual , mpc:Kontekst ;
+	mpp:rechovka "Бог не Тимошка - видит немножко"@ru , "Человек предполагает, а Бог располагает"@ru ;
+	rdfs:label "Контекст высшего"@ru .
+# 
+# http://system.mentolog.org/resources/lyudejNuzhnoLyubit
+
+mpr:lyudejNuzhnoLyubit a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstOtnoshenij ;
+	mpp:protivorechit mpr:bytLuchshim , mpr:pravilno ;
+	mpp:sochetaetsya mpr:hotyatLuchshego , mpr:neBytOdnomu , mpr:nichtozhen , mpr:pravoNaZhizn , mpr:raznye , mpr:vseHotyatSchastya ;
+	mpp:rechovka "До трех раз прощай!"@ru , "Каждый хочет любви: и солдат и моряк"@ru , "Легкую вину прощают"@ru , "Невольная ошибка прощается"@ru , "Нужно принимать человека, таким какой он есть"@ru ;
+	rdfs:label "Людей нужно любить"@ru .
+# 
+# http://system.mentolog.org/resources/neBytHuzhe
+
+mpr:neBytHuzhe a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:sochetaetsya mpr:neBytSlabym ;
+	rdfs:label "Нельзя быть хуже других"@ru .
+# 
+# http://system.mentolog.org/resources/neBytOdnomu
+
+mpr:neBytOdnomu a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:daetProblemu mpr:otkazOtVazhnogo , mpr:problemaNeblagodarnosti , mpr:problemaProforientatsii , mpr:zavisimostOtLyudej ;
+	mpp:daetStrah mpr:strahBytPokinutym ;
+	mpp:daetVygodu mpr:vsePonyatno , mpr:yaHoroshij , mpr:yaVazhenDlyaDrugih ;
+	mpp:kontekst mpr:kontekstOtnoshenij ;
+	mpp:protivorechit mpr:hotyatLuchshego ;
+	mpp:sochetaetsya mpr:bytZhenshchinoj , mpr:lyudejNuzhnoLyubit , mpr:nichtozhen , mpr:nravitsyaLyudyam ;
+	mpp:rechovka "В тесноте, да не в обиде"@ru , "Два сапога пара"@ru , "Один в поле не воин"@ru , "Старый друг лучше новых двух"@ru , "Стерпится — слюбится"@ru ;
+	rdfs:label "Нельзя быть одному"@ru .
+# 
+# http://system.mentolog.org/resources/neBytSlabym
+
+mpr:neBytSlabym a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstSily ;
+	mpp:protivorechit mpr:pravoNaZhizn ;
+	mpp:sochetaetsya mpr:dvizhenie , mpr:neBytHuzhe , mpr:nichtozhen ;
+	mpp:rechovka "Здесь для слабых места нет"@ru , "Надо уметь постоять за себя"@ru , "Нельзя давать слабину"@ru , "Слабакам дорога в ад"@ru , "Соберись, тряпка!"@ru ;
+	rdfs:label "Нельзя быть слабым"@ru .
+# 
+# http://system.mentolog.org/resources/nePrichinyatBol
+
+mpr:nePrichinyatBol a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:sochetaetsya mpr:pravoNaZhizn ;
+	rdfs:label "Нельзя причинять боль"@ru .
+# 
+# http://system.mentolog.org/resources/neRavny
+
+mpr:neRavny a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:sochetaetsya mpr:bytLuchshim ;
+	rdfs:label "Люди не равны"@ru .
+# 
+# http://system.mentolog.org/resources/neReshatZaDrugich
+
+mpr:neReshatZaDrugich a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:sochetaetsya mpr:nichtozhen , mpr:raznye ;
+	rdfs:label "Нельзя решать за других"@ru .
+# 
+# http://system.mentolog.org/resources/neterpimost
+
+mpr:terpimost a owl:NamedIndividual , mpc:Povedenie ;
+	mpp:imeetPrichinoj mpr:veraVObladanieIstinoj ;
+	rdfs:comment "Терпимость -- действительное признание и принятие Мира как пространства разного, с равными правами для существования всего. Неперпимость же означает \"я другое не понимаю и не признаю, но терплю, удерживаясь лишь внешне в рамках приличий\""@ru ;
+	rdfs:label "Терпимость / Нетерпимость"@ru .
+	
+mpr:uverennost a owl:NamedIndividual , mpc:Povedenie ;
+	mpp:myshlenie mpr:garantii, mpr:maloInformatsii, mpr:neSmogu;
+	mpp:imeetPrichinoj mpr:nichtozhen, mpr:istina, mpr:estSmysl ;
+	rdfs:comment ""@ru ;
+	rdfs:label "Уверенность / Склонность к сомнениям"@ru .	
+	
+mpr:garantii a owl:NamedIndividual , mpc:Myshlenie ;
+	mpp:ustanovka mpr:estSmysl ;
+	rdfs:comment "Не буду делать, если не уверен на 100% в результате"@ru ;
+	rdfs:label "Мне нужны гарантии"@ru .	
+	
+mpr:maloInformatsii a owl:NamedIndividual , mpc:Myshlenie ;
+	mpp:ustanovka mpr:istina ;
+	rdfs:comment "Не буду делать, если не собрал достаточно информации"@ru ;
+	rdfs:label "Нужно знать точно"@ru .
+
+mpr:neSmogu a owl:NamedIndividual , mpc:Myshlenie ;
+	mpp:ustanovka mpr:nichtozhen ;
+	rdfs:comment "Неуверен в себе, в возможности влиять на ситуацию"@ru ;
+	rdfs:label "Я не справлюсь"@ru .
+	
+mpr:zhiznPusta a owl:NamedIndividual , mpc:Myshlenie ;
+	mpp:imeetPrichinoj mpr:nichegoNeHochetsya ;
+	rdfs:comment "Человек позволил пустоте заполнить то, что МОГЛО быть им. Пустота сейчас его максимум, сил хватает лишь на отсутствие действия"@ru ;
+	rdfs:label "Жизнь пуста"@ru .	
+	
+mpr:nezhelanieMenyatsya a owl:NamedIndividual , mpc:Povedenie ;
+	mpp:imeetPrichinoj mpr:strahPoteri, mpr:strahPorazheniya, mpr:strahZhizniZrya ;
+	rdfs:comment "Человек не хочет, боится изменяться"@ru ;
+	rdfs:label "Нежелание меняться"@ru .
+
+mpr:strahPoteri a owl:NamedIndividual , mpc:Strah ;
+	rdfs:label "Cтрах потери имеющегося"@ru .
+	
+mpr:strahPorazheniya a owl:NamedIndividual , mpc:Strah ;
+	rdfs:comment "Это для них то же самое, что сдаться, не понимают разницы"@ru ;
+	rdfs:label "Cтрах признать поражение"@ru .
+		
+mpr:strahZhizniZrya a owl:NamedIndividual , mpc:Strah ;
+	rdfs:comment "Страх признать, что тот кусок жизни потрачен напрасно, зря, а эта потеря необратима"@ru ;
+	rdfs:label "Cтрах, что часть жизни зря"@ru .
+	
+	
+	
+mpr:strahPrichinitBol a owl:NamedIndividual , mpc:Strah ;
+	mpp:imeetPrichinoj  mpr:zhelanieBytHoroshim;
+	rdfs:comment "Каждый, кто утверждает, что нельзя причинять боль другим, ни один раз находил основания ее причинить. Весь вопрос в этих основаниях и способности признать за собой вину"@ru ;	
+	rdfs:label "Cтрах причинить боль"@ru .
+	
+mpr:zhelanieBytHoroshim a owl:NamedIndividual , mpc:Povedenie ;
+	rdfs:comment "Это не более чем попытка обмануть себя и других в том, что ты хороший"@ru ;
+	rdfs:label "Желание быть хорошим"@ru .
+
+	
+mpr:vladenieSoboj a owl:NamedIndividual , mpc:Povedenie ;
+	rdfs:comment "не владеть собой -- это не владеть эмоциями, то есть совершать действия, которые не являются следствием осмысленных решений, а есть плод эмоциональных порывов. Все мы знаем, что люди, которые говорят что они не могут владеть своими эмоциями - лгут, кроме малого числа исключений, которое лечится медикаментами. Что касается всех остальных, то из МП про них есть только один вопрос: из какого основания они себе разрешают такое поведение? И на него есть вполне определенный ответ: ради себя я имею право на всё (как и любой другой=каждый). Пока у них есть такое основание - поведение неизменяемо"@ru ;
+	
+	mpp:imeetPrichinoj  mpr:radiSebyaMozhnoVse;
+	rdfs:label "Владение собой / Невладение собой"@ru .
+	
+
+mpr:radiSebyaMozhnoVse a owl:NamedIndividual , mpc:Ustanovka ;
+	rdfs:comment "Почти никто не готов отказаться от такого основания. На этом месте шлю пламенный привет всем невротикам, истерикам и психотикам. Я уж и вообще не говорю, что если человек говоря Я НЕ ВЛАДЕЮ СОБОЙ говорит о своих чувствах (а говоря так он никогда не говорит о чем-то другом) - это значит что \"собой\" у него как раз равно тому, что он чувствует."@ru ;
+	rdfs:label "Ради себя человек имеет право на все"@ru .	
+
+	
+mpr:nichegoNeHochetsya a owl:NamedIndividual , mpc:Myshlenie, mpc:Problema ;
+	mpp:imeetPrichinoj mpr:nichegoNeStoyu, mpr:dorogoStoyu ;
+	rdfs:comment "Для человека ничто в мире не может производить позитив"@ru ;
+	rdfs:label "Ничего не хочется"@ru .
+	
+	
+mpr:nichegoNeStoyu a owl:NamedIndividual , mpc:Myshlenie;
+	mpp:imeetPrichinoj mpr:nichtozhen;
+	rdfs:comment "Человек ничего не может себе позволить"@ru ;
+	rdfs:label "Я ничего не стою"@ru .		
+	
+mpr:dorogoStoyu a owl:NamedIndividual , mpc:Myshlenie;
+	rdfs:comment "Для него в мире дешевка -- его ничто не может купить. Волнует лишь то, что задевает непосредственно"@ru ;
+	rdfs:label "Я слишком дорого стою"@ru .	
+ 
+# http://system.mentolog.org/resources/nichtozhen
+
+mpr:nichtozhen a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstVlasti ;
+	mpp:protivorechit mpr:bytSilnym , mpr:svyazano ;
+	mpp:sochetaetsya mpr:dvizhenie , mpr:estPrichina , mpr:estestvenno , mpr:lyudejNuzhnoLyubit , mpr:neBytOdnomu , mpr:neBytSlabym , mpr:neReshatZaDrugich , mpr:pravilno , mpr:predel , mpr:vysshee ;
+	mpp:rechovka "Всему своё время"@ru , "Всяк сверчок знай свой шесток"@ru , "Не подмажешь – не поедешь"@ru , "Нет бумажки - нет человека"@ru , "Приедет барин - нас рассудит"@ru , "Приедет барин - нас рассудит…"@ru , "Против лома нет приёма"@ru , "Утро вечера мудреней"@ru , "Хозяин-барин"@ru , "Человек предполагает, а Бог располагает"@ru , "Я - последняя буква в алфавите!"@ru , "Яблоко от яблони недалеко падает"@ru ;
+	rdfs:label "Человек по сути ничтожен"@ru .
+# 
+# http://system.mentolog.org/resources/nravitsyaLyudyam
+
+mpr:nravitsyaLyudyam a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:sochetaetsya mpr:neBytOdnomu ;
+	rdfs:label "Нужно нравиться людям"@ru .
+# 
+# http://system.mentolog.org/resources/nuzhnoVerit
+
+mpr:nuzhnoVerit a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstVlasti , mpr:kontekstVysshego ;
+	mpp:protivorechit mpr:razumny ;
+	mpp:sochetaetsya mpr:estSmysl , mpr:istina , mpr:vysshee ;
+	mpp:rechovka "Вера, надежда, любовь"@ru , "Верь в лучшее, а готовься к худшему"@ru , "Надежда - мой компас земной"@ru , "Нет веры, нет будущего"@ru , "Человек предполагает, а Бог располагает"@ru ;
+	rdfs:label "Нужно во что-то верить"@ru .
+# 
+# http://system.mentolog.org/resources/otkazOtVazhnogo
+
+mpr:otkazOtVazhnogo a owl:NamedIndividual , mpc:Problema ;
+	rdfs:label "Отказ от важного"@ru .
+# 
+# http://system.mentolog.org/resources/poMoemu
+
+mpr:poMoemu a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:sochetaetsya mpr:bytLuchshim , mpr:bytMuzhchinoj , mpr:bytZhenshchinoj , mpr:pravilno , mpr:vsemSvoboda ;
+	rdfs:label "Все должно быть по-моему"@ru .
+# 
+# http://system.mentolog.org/resources/pokoj
+
+mpr:pokoj a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstPokoya ;
+	mpp:protivorechit mpr:bytSilnym , mpr:dvizhenie ;
+	mpp:sochetaetsya mpr:estSmysl , mpr:estestvenno , mpr:predel , mpr:prosto , mpr:svyazano ;
+	mpp:rechovka "А в тюрьме щас ужин, макароны"@ru , "Баба с возу -- кобыле легче"@ru , "Бежать впереди паровоза"@ru , "Вечный бой. Покой нам только снится"@ru , "Горе от ума"@ru , "Для бешеной собаки сто километров не круг"@ru , "Лучше плохо ехать, чем хорошо идти"@ru , "Не было заботы -- купила баба порося"@ru , "Не жили богато, нех... начинай"@ru , "Ниже травы, тише воды"@ru , "Работа -- не волк, в лес не убежит"@ru , "Тише едешь -- дальше будешь"@ru , "Худой мир лучше доброй ссоры"@ru , "Чем бы дитя ни тешилось, лишь бы не плакало"@ru ;
+	rdfs:label "Все стремится к покою"@ru .
+# 
+# http://system.mentolog.org/resources/posleSmertiChto-toEst
+
+mpr:posleSmertiChto-toEst a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:sochetaetsya mpr:vysshee ;
+	rdfs:label "После смерти что-то есть"@ru .
+# 
+# http://system.mentolog.org/resources/pravilno
+
+mpr:pravilno a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstPravilnogo ;
+	mpp:protivorechit mpr:bytLuchshim , mpr:bytZhenshchinoj , mpr:estestvenno , mpr:hotyatLuchshego , mpr:lyudejNuzhnoLyubit , mpr:prosto , mpr:raznye , mpr:razumny , mpr:vseHotyatSchastya , mpr:vsemSvoboda ;
+	mpp:sochetaetsya mpr:bytSilnym , mpr:estSmysl , mpr:istina , mpr:nichtozhen , mpr:poMoemu ;
+	mpp:rechovka "Береги честь смолоду"@ru , "В чужой монастырь со своим уставом не ходят"@ru , "Всему свое время"@ru , "Делу время -- потехе час"@ru , "Дружба дружбой, а табачок врозь (а служба службой)"@ru , "Наглость -- второе счастье"@ru , "Не в силе Бог, а в правде"@ru , "Семеро одного не ждут"@ru ;
+	rdfs:label "Все должно быть правильно"@ru .
+# 
+# http://system.mentolog.org/resources/pravoNaZhizn
+
+mpr:pravoNaZhizn a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstUnikalnosti ;
+	mpp:protivorechit mpr:bytLuchshim , mpr:neBytSlabym ;
+	mpp:sochetaetsya mpr:estSmysl , mpr:lyudejNuzhnoLyubit , mpr:nePrichinyatBol , mpr:raznye , mpr:spravedlivost ;
+	mpp:rechovka "В каждом есть своя искра"@ru , "Каждый человек уникален и ценен по своему"@ru , "Любого человека можно понять, простить"@ru , "Нельзя решать за других"@ru , "Нужно помогать слабым"@ru ;
+	rdfs:label "Все имеют право на жизнь"@ru .
+# 
+# http://system.mentolog.org/resources/predel
+
+mpr:predel a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstKonechnosti ;
+	mpp:protivorechit mpr:bytLuchshim , mpr:dvizhenie , mpr:hotyatLuchshego , mpr:vsemSvoboda ;
+	mpp:sochetaetsya mpr:estSmysl , mpr:estestvenno , mpr:nichtozhen , mpr:pokoj ;
+	mpp:rechovka "Береги честь смолоду"@ru , "Все когда-нибудь закончится"@ru , "Всему есть предел"@ru , "Куй железо, пока горячо"@ru , "Сколько веревочке ни виться, кончику быть"@ru ;
+	rdfs:label "Все имеет предел"@ru .
+# 
+# http://system.mentolog.org/resources/problemaNeblagodarnosti
+
+mpr:problemaNeblagodarnosti a owl:NamedIndividual , mpc:Problema ;
+	rdfs:label "Проблема неблагодарности"@ru .
+# 
+# http://system.mentolog.org/resources/problemaProforientatsii
+
+mpr:problemaProforientatsii a owl:NamedIndividual , mpc:Problema ;
+	rdfs:label "Проблема профориентации"@ru .
+# 
+# http://system.mentolog.org/resources/prosto
+
+mpr:prosto a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstProstoty , mpr:kontekstVygody ;
+	mpp:protivorechit mpr:hotyatLuchshego , mpr:pravilno ;
+	mpp:sochetaetsya mpr:estestvenno , mpr:pokoj , mpr:vseHotyatSchastya ;
+	mpp:rechovka "Будь проще и люди к тебе потянутся"@ru , "Живи просто — проживешь лет сто"@ru , "Лучшее решение из возможных — самое простое"@ru , "Не ищи мудрости, ищи простоты"@ru ;
+	rdfs:label "Все должно быть просто"@ru .
+# 
+# http://system.mentolog.org/resources/raznye
+
+mpr:raznye a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstUnikalnosti ;
+	mpp:protivorechit mpr:bytLuchshim , mpr:pravilno ;
+	mpp:sochetaetsya mpr:bytSoboj , mpr:lyudejNuzhnoLyubit , mpr:neReshatZaDrugich , mpr:pravoNaZhizn ;
+	mpp:rechovka "В каждом есть что-то особенное"@ru , "К каждому нужен особый подход"@ru , "Каждый человек уникальный по-своему"@ru , "Людей нельзя сравнивать"@ru , "Не суди по себе"@ru ;
+	rdfs:label "Все люди разные"@ru .
+# 
+# http://system.mentolog.org/resources/razumny
+
+mpr:razumny a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:protivorechit mpr:estestvenno , mpr:nuzhnoVerit , mpr:pravilno ;
+	mpp:sochetaetsya mpr:bytLuchshim , mpr:estSmysl , mpr:istina ;
+	mpp:rechovka "Без царя в голове"@ru , "Встречают по одёжке, а провожают по уму"@ru , "Готовь сани летом, а телегу зимой"@ru , "Для бешеной собаки сто километров не круг"@ru , "Дуракам везёт"@ru , "Заставь дурака Богу молиться - он и лоб расшибет"@ru , "Копейка рубль бережет"@ru , "Куй железо, пока горячо"@ru , "На дураков не обижаются"@ru , "Не зная броду, не суйся в воду"@ru , "Не плюй в колодец – потом пригодится"@ru , "Нет ума - иди работать"@ru , "Нечего на зеркало пенять, коль рожа крива"@ru , "Своя голова на плечах"@ru , "Собака лает - караван идет"@ru , "Тише едешь - дальше будешь"@ru , "Умом Россию не понять..."@ru ;
+	rdfs:label "Человек существо разумное"@ru .
+# 
+# http://system.mentolog.org/resources/spravedlivost
+
+mpr:spravedlivost a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:sochetaetsya mpr:pravoNaZhizn , mpr:svyazano , mpr:vysshee ;
+	rdfs:label "Все должно быть справедливо"@ru .
+# 
+# http://system.mentolog.org/resources/strahBytPokinutym
+
+mpr:strahBytPokinutym a owl:NamedIndividual , mpc:Strah ;
+	rdfs:label "Страх быть покинутым"@ru .
+# 
+# http://system.mentolog.org/resources/svyazano
+
+mpr:svyazano a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstOtvetstvennosti , mpr:kontekstPredskazuemosti , mpr:kontekstSpravedlivosti ;
+	mpp:protivorechit mpr:dvizhenie , mpr:nichtozhen ;
+	mpp:sochetaetsya mpr:estPrichina , mpr:estSmysl , mpr:pokoj , mpr:spravedlivost , mpr:vysshee ;
+	mpp:rechovka "Взмах крыла бабочки на одном континенте может вызвать землетрясение на другом"@ru , "Делай добро и оно обязательно вернется"@ru , "Не рой другому яму - сам в неё попадёшь"@ru , "Скупой платит дважды"@ru , "Случайности не случайны"@ru ;
+	rdfs:label "Все со всем связано"@ru .
+# 
+# http://system.mentolog.org/resources/veraVObladanieIstinoj
+
+mpr:veraVObladanieIstinoj a owl:NamedIndividual , mpc:Myshlenie ;
+	rdfs:comment "Это возможность познания того, «как все есть на самом деле». Именно эта фундаментальная рационалистическая идея всей западной науки и философии, вообще западной мысли, порождает как у народов и отдельных личностей излишне самоуверенных, так, в равной степени, парадоксальным образом, и у народов, напротив – крайне в себе неуверенных, духовно слабых, безусловно вредную иллюзию или надежду, что именно они обладают этим «истинным знанием», тем, «как все есть на самом деле», тем, как «правильно», как разумно, должно и так далее. И до тех пор, пока эта фундаментальная гносеологическая установка не будет отвергнута полностью, как заведомо ложная – до тех пор не будет возможна нигде и настоящая, подлинная терпимость и толерантность, заменяемая модной сейчас политкорректностью, которая с терпимостью не имеет ничего общего. Подлинная терпимость, о которой мы здесь говорим предполагает не установку «я другое не понимаю и не признаю, но терплю, удерживаясь лишь внешне в рамках приличий», а действительный отказ от самой возможности того, что кто-либо может быть носителем безусловной и безупречной истины, и действительное признание и принятие Мира как пространства разного, с равными правами для существования всего"@ru ;
+	rdfs:label "Вера в обладание Истиной"@ru .
+
+
+	
+mpr:luchshe a owl:NamedIndividual , mpc:Koncept ;
+	rdfs:comment "Для среднестатистического человека ЛУЧШЕ -- это проще, это веселее, сытнее и приятнее"@ru ;
+	mpp:ustanovka mpr:hotyatLuchshego;
+	mpp:kontekst mpr:kontekstVygody ;
+	rdfs:label "Лучше"@ru .
+	
+mpr:obman a owl:NamedIndividual , mpc:Koncept ;
+	rdfs:comment "Обман обычно допустим, если ведет к личной выгоде. Но допустим лишь если обманывают не тебя"@ru ;
+	mpp:ustanovka mpr:hotyatLuchshego, mpr:vseHotyatSchastya;
+	mpp:kontekst mpr:kontekstVygody ;
+	rdfs:label "Обман"@ru .	
+	
+	
+	# 
+# http://system.mentolog.org/resources/vseHotyatSchastya
+
+mpr:vseHotyatSchastya a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstPrirodnosti , mpr:kontekstVygody ;
+	mpp:protivorechit mpr:pravilno ;
+	mpp:sochetaetsya mpr:bytZhenshchinoj , mpr:estestvenno , mpr:hotyatLuchshego , mpr:lyudejNuzhnoLyubit , mpr:prosto ;
+	mpp:rechovka "Живи «здесь и сейчас»"@ru , "Кому счастье служит, тот ни о чем не тужит"@ru , "Не ищи мудрости, ищи простоты"@ru , "Не родись красивой, а родись счастливой"@ru , "Счастье у каждого свое"@ru , "Человек создан для счастья, как птица для полета"@ru ;
+	rdfs:label "Все хотят счастья"@ru .
+	
+	
+	
+	
+mpr:sebyaNuzhnoLyubit a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstOtnoshenij ;
+	mpp:imeetPrichinoj mpr:NiktoNikomuNeNuzhen ;
+	mpp:rechovka "Себя не полюбишь -- никто не полюбит"@ru ;
+	rdfs:label "Себя нужно любить"@ru .
+	
+mpr:NiktoNikomuNeNuzhen a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstOtnoshenij ;
+	mpp:rechovka "Человек человеку волк"@ru ;
+	rdfs:label "Никто никому не нужен"@ru .
+	
+	
+# 
+# http://system.mentolog.org/resources/vsePonyatno
+
+mpr:vsePonyatno a owl:NamedIndividual , mpc:Vygoda ;
+	rdfs:label "Все с ними понятно"@ru .
+# 
+# http://system.mentolog.org/resources/vsemSvoboda
+
+mpr:vsemSvoboda a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstSvobody ;
+	mpp:protivorechit mpr:estSmysl , mpr:pravilno , mpr:predel ;
+	mpp:sochetaetsya mpr:bytMuzhchinoj , mpr:bytSilnym , mpr:bytSoboj , mpr:dvizhenie , mpr:poMoemu ;
+	mpp:rechovka "Вольному воробью и соловей в клетке завидует"@ru , "Никто никому ничего не должен"@ru , "Правила существуют, чтобы их нарушать"@ru , "Сам себе хозяин"@ru , "Что хочу, то и ворочу"@ru ;
+	rdfs:label "Всем нужна свобода"@ru .
+# 
+# http://system.mentolog.org/resources/vysshee
+
+mpr:vysshee a owl:NamedIndividual , mpc:Ustanovka ;
+	mpp:kontekst mpr:kontekstVysshego ;
+	mpp:protivorechit mpr:dvizhenie ;
+	mpp:sochetaetsya mpr:estPrichina , mpr:estSmysl , mpr:istina , mpr:nichtozhen , mpr:nuzhnoVerit , mpr:posleSmertiChto-toEst , mpr:spravedlivost , mpr:svyazano ;
+	mpp:rechovka "Бог не Тимошка - видит немножко"@ru , "Все под богом ходим"@ru , "От судьбы не уйдешь"@ru , "Побойся бога"@ru , "Человек предполагает, а Бог располагает"@ru ;
+	rdfs:label "Есть что-то высшее"@ru .
+# 
+# http://system.mentolog.org/resources/yaHoroshij
+
+mpr:yaHoroshij a owl:NamedIndividual , mpc:Vygoda ;
+	rdfs:label "Я хороший"@ru .
+# 
+# http://system.mentolog.org/resources/yaVazhenDlyaDrugih
+
+mpr:yaVazhenDlyaDrugih a owl:NamedIndividual , mpc:Vygoda ;
+	rdfs:label "Я важен для других"@ru .
+# 
+# http://system.mentolog.org/resources/zavisimostOtLyudej
+
+mpr:zavisimostOtLyudej a owl:NamedIndividual , mpc:Problema ;
+	rdfs:label "Зависимость от людей"@ru .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+
+rdf:type rdfs:label "Тип"@ru .
+rdfs:comment rdfs:label "Комментарий"@ru .
+
+# 
+# Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi

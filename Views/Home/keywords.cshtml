@@ -1,0 +1,93 @@
+﻿@using System.Collections;
+@using ObjectIdentificationWebApp.Models
+@using ObjectIdentificationWebApp.Ontology;
+@using VDS.RDF;
+@using VDS.RDF.Query;
+
+@model CustomQry
+
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li><a href="/mentMat/Ustanovka">Установки</a></li>
+        <li><a href="/mentMat/Kontekst">Контексты</a></li>
+        <li><a href="/keywords">Ключ.слова</a></li>
+    </ul>
+</div>
+
+@{
+    CustomQry cQry = Model;
+    if (Model == null)
+    {
+        cQry = new ObjectIdentificationWebApp.Models.CustomQry() { QryText = "Введите запрос вместо этого текста" };
+    }
+}
+
+<h2>Поиск контекстов и установок по ключевому слову.</h2>
+<p></p>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Введите начало слова:</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <input id="QryText" name="QryText" type="text">
+                
+            @Html.ValidationMessageFor(model => model.QryText, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group col-md-12">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Отправить запрос" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@{
+    List<SparqlResult> results = new List<SparqlResult>();
+    if (Model != null)
+    {
+        //Get results of qry
+        results = KnowledgeBase.getList_keywords(Model.QryText);
+
+    }
+}
+
+@if (results.Count > 0)
+{
+<h4>Results</h4>
+<div>
+    <table>
+        <thead>
+            @foreach (string header in results[0].Variables)
+            {
+                <th>@header.ToString()</th>
+            }
+        </thead>
+        <tbody>
+            @foreach (SparqlResult row in results)
+            {
+                <tr>
+                @foreach (string header in results[0].Variables)
+                {
+                    try
+                    {
+                        <td>@row[header].ToString()</td>
+                    }
+                    catch (VDS.RDF.RdfException e)
+                    {
+                        <td></td>
+                    }
+                }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}
+
