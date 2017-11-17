@@ -64,20 +64,27 @@
 
                     @if (@sr["object"].NodeType == NodeType.Uri)
                     {
-                        string label;
-                        try
+                        if (@sr["predicate"].ToString().EndsWith("seeAlso"))
                         {
-                            label = KnowledgeBase.GetNodeString(@sr["objLabel"]);
+                            <td><a href="@objectURI">@objectURI</a></td>
                         }
-                        catch (VDS.RDF.RdfException e)
+                        else
                         {
-                            label = objectName;
+                            string label;
+                            try
+                            {
+                                label = KnowledgeBase.GetNodeString(@sr["objLabel"]);
+                            }
+                            catch (VDS.RDF.RdfException e)
+                            {
+                                label = objectName;
+                            }
+                            <td><a href="@objectURI">@label</a></td>
                         }
-                        <td><a href="@objectURI">@label</a></td>
                     }
                     else
                     {
-                        <td>@objectName</td> 
+                        <td>@objectName</td>
                     }
                </tr>
 
