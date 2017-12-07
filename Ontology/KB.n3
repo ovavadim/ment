@@ -1,19 +1,61 @@
-@prefix : <file:///G:/Onto/untitled-ontology-41#> .
-@prefix mpc: <http://system.mentolog.org/classes/> .
-@prefix mpp: <http://system.mentolog.org/properties/> .
-@prefix mpr: <http://system.mentolog.org/resources/> .
+@prefix : <file:///G:/Onto/untitled-ontology-42#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <file:///G:/Onto/untitled-ontology-41> .
+@base <file:///G:/Onto/untitled-ontology-42> .
 
-<file:///G:/Onto/untitled-ontology-41> rdf:type owl:Ontology .
+<file:///G:/Onto/untitled-ontology-42> rdf:type owl:Ontology .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://system.mentolog.org/properties/daetProblemu
+<http://system.mentolog.org/properties/daetProblemu> rdf:type owl:AnnotationProperty ;
+                                                     rdfs:label "Создает проблему"@ru .
+
+
+###  http://system.mentolog.org/properties/daetStrah
+<http://system.mentolog.org/properties/daetStrah> rdf:type owl:AnnotationProperty ;
+                                                  rdfs:label "Порождает страх"@ru .
+
+
+###  http://system.mentolog.org/properties/daetVygodu
+<http://system.mentolog.org/properties/daetVygodu> rdf:type owl:AnnotationProperty ;
+                                                   rdfs:label "Дает выгоду"@ru .
+
+
+###  http://system.mentolog.org/properties/imeetPrichinoj
+<http://system.mentolog.org/properties/imeetPrichinoj> rdf:type owl:AnnotationProperty ;
+                                                       rdfs:label "Имеет причиной"@ru .
+
+
+###  http://system.mentolog.org/properties/kontekst
+<http://system.mentolog.org/properties/kontekst> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:label "Принадлежит контексту"@ru .
+
+
+###  http://system.mentolog.org/properties/myshlenie
+<http://system.mentolog.org/properties/myshlenie> rdf:type owl:AnnotationProperty ;
+                                                  rdfs:label "Содержание мышления"@ru .
+
+
+###  http://system.mentolog.org/properties/rechovka
+<http://system.mentolog.org/properties/rechovka> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:label "Речовка"@ru .
+
+
+###  http://system.mentolog.org/properties/svyazannyjKoncept
+<http://system.mentolog.org/properties/svyazannyjKoncept> rdf:type owl:AnnotationProperty ;
+                                                          rdfs:label "Связанный концепт"@ru .
+
+
+###  http://system.mentolog.org/properties/ustanovka
+<http://system.mentolog.org/properties/ustanovka> rdf:type owl:AnnotationProperty ;
+                                                  rdfs:label "Связанная установка"@ru .
+
 
 ###  http://www.w3.org/2000/01/rdf-schema#comment
 rdfs:comment rdfs:label "Комментарий"@ru .
@@ -31,30 +73,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 #    Object Properties
 #################################################################
 
-###  http://system.mentolog.org/properties/daetProblemu
-<http://system.mentolog.org/properties/daetProblemu> rdfs:label "Создает проблему"@ru .
-
-
-###  http://system.mentolog.org/properties/daetStrah
-<http://system.mentolog.org/properties/daetStrah> rdfs:label "Порождает страх"@ru .
-
-
-###  http://system.mentolog.org/properties/daetVygodu
-<http://system.mentolog.org/properties/daetVygodu> rdfs:label "Дает выгоду"@ru .
-
-
-###  http://system.mentolog.org/properties/imeetPrichinoj
-<http://system.mentolog.org/properties/imeetPrichinoj> rdfs:label "Имеет причиной"@ru .
-
-
-###  http://system.mentolog.org/properties/kontekst
-<http://system.mentolog.org/properties/kontekst> rdfs:label "Принадлежит контексту"@ru .
-
-
-###  http://system.mentolog.org/properties/myshlenie
-<http://system.mentolog.org/properties/myshlenie> rdfs:label "Содержание мышления"@ru .
-
-
 ###  http://system.mentolog.org/properties/protivorechit
 <http://system.mentolog.org/properties/protivorechit> rdf:type owl:ObjectProperty ;
                                                       owl:inverseOf <http://system.mentolog.org/properties/protivorechit> ;
@@ -69,10 +87,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                      rdfs:label "Сочетается с"@ru .
 
 
-###  http://system.mentolog.org/properties/svyazannyjKoncept
-<http://system.mentolog.org/properties/svyazannyjKoncept> rdfs:label "Связанный концепт"@ru .
-
-
 ###  http://system.mentolog.org/properties/text
 <http://system.mentolog.org/properties/text> rdf:type owl:ObjectProperty ;
                                              owl:inverseOf <http://system.mentolog.org/properties/topic> ;
@@ -82,22 +96,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/properties/topic
 <http://system.mentolog.org/properties/topic> rdf:type owl:ObjectProperty ;
                                               rdfs:label "На тему"@ru .
-
-
-###  http://system.mentolog.org/properties/ustanovka
-<http://system.mentolog.org/properties/ustanovka> rdfs:label "Связанная установка"@ru .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://system.mentolog.org/properties/prichina
-<http://system.mentolog.org/properties/prichina> rdfs:label "Имеет причиной"@ru .
-
-
-###  http://system.mentolog.org/properties/rechovka
-<http://system.mentolog.org/properties/rechovka> rdfs:label "Речовка"@ru .
 
 
 #################################################################
@@ -214,10 +212,17 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                      rdfs:label "Англотрансфер"@ru .
 
 
+###  http://system.mentolog.org/resources/associaciya
+<http://system.mentolog.org/resources/associaciya> rdf:type owl:NamedIndividual ,
+                                                            <http://system.mentolog.org/classes/Topic> ;
+                                                   <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/schemyUstDoklada> ,
+                                                                                                <http://system.mentolog.org/resources/ustDoklad> ;
+                                                   rdfs:label "Ассоциация"@ru .
+
+
 ###  http://system.mentolog.org/resources/bytLuchshim
 <http://system.mentolog.org/resources/bytLuchshim> rdf:type owl:NamedIndividual ,
                                                             <http://system.mentolog.org/classes/Ustanovka> ;
-                                                   <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstLuchshesti> ;
                                                    <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytSoboj> ,
                                                                                                          <http://system.mentolog.org/resources/lyudejNuzhnoLyubit> ,
                                                                                                          <http://system.mentolog.org/resources/pravilno> ,
@@ -229,6 +234,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                         <http://system.mentolog.org/resources/neRavny> ,
                                                                                                         <http://system.mentolog.org/resources/poMoemu> ,
                                                                                                         <http://system.mentolog.org/resources/razumny> ;
+                                                   <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstLuchshesti> ;
                                                    <http://system.mentolog.org/properties/rechovka> "Кто первый, тот и прав"@ru ,
                                                                                                     "Лучше быть первым на селе, чем последним при дворе"@ru ,
                                                                                                     "Лучшие имеют право на все"@ru ,
@@ -240,13 +246,13 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/bytMuzhchinoj
 <http://system.mentolog.org/resources/bytMuzhchinoj> rdf:type owl:NamedIndividual ,
                                                               <http://system.mentolog.org/classes/Ustanovka> ;
-                                                     <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPola> ,
-                                                                                                      <http://system.mentolog.org/resources/kontekstSily> ;
                                                      <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytSoboj> ;
                                                      <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/bytSilnym> ,
                                                                                                           <http://system.mentolog.org/resources/bytZhenshchinoj> ,
                                                                                                           <http://system.mentolog.org/resources/poMoemu> ,
                                                                                                           <http://system.mentolog.org/resources/vsemSvoboda> ;
+                                                     <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPola> ,
+                                                                                                      <http://system.mentolog.org/resources/kontekstSily> ;
                                                      <http://system.mentolog.org/properties/rechovka> "За мужем, как за каменной стеной"@ru ,
                                                                                                       "Мужик сказал — мужик сделал"@ru ,
                                                                                                       "Мужчина слов на ветер не бросает"@ru ,
@@ -258,7 +264,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/bytSilnym
 <http://system.mentolog.org/resources/bytSilnym> rdf:type owl:NamedIndividual ,
                                                           <http://system.mentolog.org/classes/Ustanovka> ;
-                                                 <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstSily> ;
                                                  <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytSoboj> ,
                                                                                                        <http://system.mentolog.org/resources/nichtozhen> ,
                                                                                                        <http://system.mentolog.org/resources/pokoj> ;
@@ -266,6 +271,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                       <http://system.mentolog.org/resources/bytMuzhchinoj> ,
                                                                                                       <http://system.mentolog.org/resources/pravilno> ,
                                                                                                       <http://system.mentolog.org/resources/vsemSvoboda> ;
+                                                 <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstSily> ;
                                                  <http://system.mentolog.org/properties/rechovka> "Взялся за гуж - не говори, что не дюж"@ru ,
                                                                                                   "Выживают только сильнейшие"@ru ,
                                                                                                   "На Бога надейся, а сам не плошай"@ru ,
@@ -278,9 +284,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/bytSoboj
 <http://system.mentolog.org/resources/bytSoboj> rdf:type owl:NamedIndividual ,
                                                          <http://system.mentolog.org/classes/Ustanovka> ;
-                                                <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstDvizheniya> ,
-                                                                                                 <http://system.mentolog.org/resources/kontekstIstiny> ,
-                                                                                                 <http://system.mentolog.org/resources/kontekstSvobody> ;
                                                 <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytLuchshim> ,
                                                                                                       <http://system.mentolog.org/resources/bytMuzhchinoj> ,
                                                                                                       <http://system.mentolog.org/resources/bytSilnym> ,
@@ -289,6 +292,9 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                 <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/estestvenno> ,
                                                                                                      <http://system.mentolog.org/resources/raznye> ,
                                                                                                      <http://system.mentolog.org/resources/vsemSvoboda> ;
+                                                <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstDvizheniya> ,
+                                                                                                 <http://system.mentolog.org/resources/kontekstIstiny> ,
+                                                                                                 <http://system.mentolog.org/resources/kontekstSvobody> ;
                                                 <http://system.mentolog.org/properties/rechovka> "Каждый др...т как он хочет"@ru ,
                                                                                                  "Начни с себя"@ru ,
                                                                                                  "Не иди за толпой"@ru ,
@@ -300,7 +306,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/bytZhenshchinoj
 <http://system.mentolog.org/resources/bytZhenshchinoj> rdf:type owl:NamedIndividual ,
                                                                 <http://system.mentolog.org/classes/Ustanovka> ;
-                                                       <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPola> ;
                                                        <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytSoboj> ,
                                                                                                              <http://system.mentolog.org/resources/dvizhenie> ,
                                                                                                              <http://system.mentolog.org/resources/pravilno> ;
@@ -309,12 +314,22 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                             <http://system.mentolog.org/resources/neBytOdnomu> ,
                                                                                                             <http://system.mentolog.org/resources/poMoemu> ,
                                                                                                             <http://system.mentolog.org/resources/vseHotyatSchastya> ;
+                                                       <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPola> ;
                                                        <http://system.mentolog.org/properties/rechovka> "Женщина создана для красоты и любви"@ru ,
                                                                                                         "Женщинам нужно уступать"@ru ,
                                                                                                         "За каждым великим мужчиной стоит великая женщина"@ru ,
                                                                                                         "Мужчина — голова, а женщина — шея"@ru ,
                                                                                                         "Сила женщины в слабости"@ru ;
                                                        rdfs:label "Нужно быть женщиной"@ru .
+
+
+###  http://system.mentolog.org/resources/chtoVklyuchaetKazhdayaIzGruppKonfliktov
+<http://system.mentolog.org/resources/chtoVklyuchaetKazhdayaIzGruppKonfliktov> rdf:type owl:NamedIndividual ,
+                                                                                        <http://system.mentolog.org/classes/Text> ;
+                                                                               <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/konferentsii> ,
+                                                                                                                             <http://system.mentolog.org/resources/konflictyMP> ;
+                                                                               rdfs:label "Что в себя включает каждая из этих групп конфликтов"@ru ;
+                                                                               rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=222#p1127> .
 
 
 ###  http://system.mentolog.org/resources/commentariiAnglInostrantsev
@@ -329,7 +344,14 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/doklad
 <http://system.mentolog.org/resources/doklad> rdf:type owl:NamedIndividual ,
                                                        <http://system.mentolog.org/classes/Topic> ;
-                                              <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/schemyUstDoklada> ,
+                                              <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/kakMenyatRusOnufriev> ,
+                                                                                           <http://system.mentolog.org/resources/mentKakPonVSPYazKotov> ,
+                                                                                           <http://system.mentolog.org/resources/pripIstFaktoryFormMentAntoni> ,
+                                                                                           <http://system.mentolog.org/resources/problematizRusMentSleptsov> ,
+                                                                                           <http://system.mentolog.org/resources/proyavlRusMentVYazykeProkopenko> ,
+                                                                                           <http://system.mentolog.org/resources/schastePolovnikov> ,
+                                                                                           <http://system.mentolog.org/resources/schemaRusMentOsennyaya> ,
+                                                                                           <http://system.mentolog.org/resources/schemyUstDoklada> ,
                                                                                            <http://system.mentolog.org/resources/ustDoklad> ;
                                               rdfs:label "Доклад"@ru .
 
@@ -344,7 +366,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/dvizhenie
 <http://system.mentolog.org/resources/dvizhenie> rdf:type owl:NamedIndividual ,
                                                           <http://system.mentolog.org/classes/Ustanovka> ;
-                                                 <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstDvizheniya> ;
                                                  <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytZhenshchinoj> ,
                                                                                                        <http://system.mentolog.org/resources/istina> ,
                                                                                                        <http://system.mentolog.org/resources/pokoj> ,
@@ -355,6 +376,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                       <http://system.mentolog.org/resources/neBytSlabym> ,
                                                                                                       <http://system.mentolog.org/resources/nichtozhen> ,
                                                                                                       <http://system.mentolog.org/resources/vsemSvoboda> ;
+                                                 <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstDvizheniya> ;
                                                  <http://system.mentolog.org/properties/rechovka> "Вечный бой. Покой нам только снится"@ru ,
                                                                                                   "Все проходит, и это пройдет"@ru ,
                                                                                                   "Наш пострел везде поспел"@ru ,
@@ -366,13 +388,13 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/estPrichina
 <http://system.mentolog.org/resources/estPrichina> rdf:type owl:NamedIndividual ,
                                                             <http://system.mentolog.org/classes/Ustanovka> ;
-                                                   <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPredskazuemosti> ,
-                                                                                                    <http://system.mentolog.org/resources/kontekstVlasti> ;
                                                    <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/estestvenno> ,
                                                                                                         <http://system.mentolog.org/resources/istina> ,
                                                                                                         <http://system.mentolog.org/resources/nichtozhen> ,
                                                                                                         <http://system.mentolog.org/resources/svyazano> ,
                                                                                                         <http://system.mentolog.org/resources/vysshee> ;
+                                                   <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPredskazuemosti> ,
+                                                                                                    <http://system.mentolog.org/resources/kontekstVlasti> ;
                                                    <http://system.mentolog.org/properties/rechovka> "Ничего не происходит просто так"@ru ,
                                                                                                     "Скупой платит дважды"@ru ,
                                                                                                     "Случайности не случайны"@ru ,
@@ -385,8 +407,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/estSmysl
 <http://system.mentolog.org/resources/estSmysl> rdf:type owl:NamedIndividual ,
                                                          <http://system.mentolog.org/classes/Ustanovka> ;
-                                                <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstRazumnosti> ,
-                                                                                                 <http://system.mentolog.org/resources/kontekstVygody> ;
                                                 <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/estestvenno> ,
                                                                                                       <http://system.mentolog.org/resources/vsemSvoboda> ;
                                                 <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/istina> ,
@@ -398,6 +418,8 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                      <http://system.mentolog.org/resources/razumny> ,
                                                                                                      <http://system.mentolog.org/resources/svyazano> ,
                                                                                                      <http://system.mentolog.org/resources/vysshee> ;
+                                                <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstRazumnosti> ,
+                                                                                                 <http://system.mentolog.org/resources/kontekstVygody> ;
                                                 <http://system.mentolog.org/properties/rechovka> "Все должно быть не зря"@ru ,
                                                                                                  "Всё, что ни делается – всё к лучшему"@ru ,
                                                                                                  "День прожит не зря"@ru ,
@@ -410,7 +432,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/estestvenno
 <http://system.mentolog.org/resources/estestvenno> rdf:type owl:NamedIndividual ,
                                                             <http://system.mentolog.org/classes/Ustanovka> ;
-                                                   <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPrirodnosti> ;
                                                    <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/estSmysl> ,
                                                                                                          <http://system.mentolog.org/resources/istina> ,
                                                                                                          <http://system.mentolog.org/resources/pravilno> ,
@@ -424,6 +445,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                         <http://system.mentolog.org/resources/predel> ,
                                                                                                         <http://system.mentolog.org/resources/prosto> ,
                                                                                                         <http://system.mentolog.org/resources/vseHotyatSchastya> ;
+                                                   <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPrirodnosti> ;
                                                    <http://system.mentolog.org/properties/rechovka> "Война войной, а обед по расписанию"@ru ,
                                                                                                     "Имидж ничто, жажда все"@ru ,
                                                                                                     "Против природы не попрешь"@ru ,
@@ -448,10 +470,19 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                 rdfs:label "Мне нужны гарантии"@ru .
 
 
+###  http://system.mentolog.org/resources/god2016vTomske
+<http://system.mentolog.org/resources/god2016vTomske> rdf:type owl:NamedIndividual ,
+                                                               <http://system.mentolog.org/classes/Text> ;
+                                                      <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/otchety> ,
+                                                                                                    <http://system.mentolog.org/resources/problemy> ,
+                                                                                                    <http://system.mentolog.org/resources/rezultatyAnaliza> ;
+                                                      rdfs:label "2016 год в Томске"@ru ;
+                                                      rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=244#p1253> .
+
+
 ###  http://system.mentolog.org/resources/hotyatLuchshego
 <http://system.mentolog.org/resources/hotyatLuchshego> rdf:type owl:NamedIndividual ,
                                                                 <http://system.mentolog.org/classes/Ustanovka> ;
-                                                       <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstVygody> ;
                                                        <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytSoboj> ,
                                                                                                              <http://system.mentolog.org/resources/neBytOdnomu> ,
                                                                                                              <http://system.mentolog.org/resources/pravilno> ,
@@ -462,27 +493,47 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                             <http://system.mentolog.org/resources/estestvenno> ,
                                                                                                             <http://system.mentolog.org/resources/lyudejNuzhnoLyubit> ,
                                                                                                             <http://system.mentolog.org/resources/vseHotyatSchastya> ;
-                                                       <http://system.mentolog.org/properties/svyazannyjKoncept> <http://system.mentolog.org/resources/luchshe> ;
+                                                       <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstVygody> ;
                                                        <http://system.mentolog.org/properties/rechovka> "Бери от жизни только лучшее"@ru ,
                                                                                                         "Зачем жить хорошо, если можно лучше?"@ru ,
                                                                                                         "Плох тот солдат, который не мечтает стать генералом"@ru ,
                                                                                                         "После нас хоть потоп"@ru ,
                                                                                                         "Рыба ищет, где глубже, а человек, где лучше"@ru ,
                                                                                                         "Убить двух зайцев"@ru ;
+                                                       <http://system.mentolog.org/properties/svyazannyjKoncept> <http://system.mentolog.org/resources/luchshe> ;
                                                        rdfs:label "Все хотят лучшего"@ru .
 
 
 ###  http://system.mentolog.org/resources/idei
 <http://system.mentolog.org/resources/idei> rdf:type owl:NamedIndividual ,
                                                      <http://system.mentolog.org/classes/Topic> ;
-                                            <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/kluchIdejRusskojYazikovojKartinyMira> ;
+                                            <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/kluchIdejRusskojYazikovojKartinyMira> ,
+                                                                                         <http://system.mentolog.org/resources/nasledovaniePereocenkiVsekhCennostejUNicshe> ;
                                             rdfs:label "Идеи"@ru .
+
+
+###  http://system.mentolog.org/resources/interviewSmentologom
+<http://system.mentolog.org/resources/interviewSmentologom> rdf:type owl:NamedIndividual ,
+                                                                     <http://system.mentolog.org/classes/Text> ;
+                                                            <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/oMP> ,
+                                                                                                          <http://system.mentolog.org/resources/sodMyshleniya> ;
+                                                            rdfs:label "Интервью с ментологом"@ru ;
+                                                            rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=595> ,
+                                                                         <http://mentally.eu/mentologiya/intervyu-s-avtorom-podxoda-16-03-2012/> .
+
+
+###  http://system.mentolog.org/resources/introekciyaVgeshtaltTerapii
+<http://system.mentolog.org/resources/introekciyaVgeshtaltTerapii> rdf:type owl:NamedIndividual ,
+                                                                            <http://system.mentolog.org/classes/Text> ;
+                                                                   <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/otstrojka> ,
+                                                                                                                 <http://system.mentolog.org/resources/psicholPsichoanaliz> ;
+                                                                   rdfs:label "Интроекция в гештальт-терапии"@ru ;
+                                                                   rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=122> .
 
 
 ###  http://system.mentolog.org/resources/istina
 <http://system.mentolog.org/resources/istina> rdf:type owl:NamedIndividual ,
                                                        <http://system.mentolog.org/classes/Ustanovka> ;
-                                              <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstIstiny> ;
                                               <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/dvizhenie> ,
                                                                                                     <http://system.mentolog.org/resources/estestvenno> ;
                                               <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/estPrichina> ,
@@ -491,6 +542,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                    <http://system.mentolog.org/resources/pravilno> ,
                                                                                                    <http://system.mentolog.org/resources/razumny> ,
                                                                                                    <http://system.mentolog.org/resources/vysshee> ;
+                                              <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstIstiny> ;
                                               <http://system.mentolog.org/properties/rechovka> "В тихом омуте черти водятся"@ru ,
                                                                                                "Встречают по одёжке, а провожают по уму"@ru ,
                                                                                                "Глаза - зеркало души"@ru ,
@@ -503,6 +555,24 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                "Нечего на зеркало пенять, коль рожа крива"@ru ,
                                                                                                "Семь раз отмерь - один отрежь"@ru ;
                                               rdfs:label "Нужно стремиться к истине"@ru .
+
+
+###  http://system.mentolog.org/resources/itogyTemyObsuzhdeniya
+<http://system.mentolog.org/resources/itogyTemyObsuzhdeniya> rdf:type owl:NamedIndividual ,
+                                                                      <http://system.mentolog.org/classes/Text> ;
+                                                             rdfs:label "Итоги обсуждения Конф-2015 в Томске"@ru ;
+                                                             rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=574> .
+
+
+###  http://system.mentolog.org/resources/kakMenyatRusOnufriev
+<http://system.mentolog.org/resources/kakMenyatRusOnufriev> rdf:type owl:NamedIndividual ,
+                                                                     <http://system.mentolog.org/classes/Text> ;
+                                                            <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/doklad> ,
+                                                                                                          <http://system.mentolog.org/resources/konferentsii> ,
+                                                                                                          <http://system.mentolog.org/resources/mentOsnovaniya> ,
+                                                                                                          <http://system.mentolog.org/resources/rezultatyAnaliza> ;
+                                                            rdfs:label "Доклад об изменении русских, Онуфриев"@ru ;
+                                                            rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=582> .
 
 
 ###  http://system.mentolog.org/resources/kartinyMira
@@ -520,22 +590,50 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                                           <http://system.mentolog.org/resources/idei> ,
                                                                                                                           <http://system.mentolog.org/resources/kartinyMira> ,
                                                                                                                           <http://system.mentolog.org/resources/sodMyshleniya> ;
-                                                                            rdfs:label "Схемы по Установочному докладу АБ"@ru ;
+                                                                            rdfs:label "Ключевые идеи русской языковой картины мира"@ru ;
                                                                             rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=40&t=284#p1607> .
+
+
+###  http://system.mentolog.org/resources/kognitivnaya_psikhologia_-_kognitivnye_struktury
+<http://system.mentolog.org/resources/kognitivnaya_psikhologia_-_kognitivnye_struktury> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://system.mentolog.org/classes/Text> ;
+                                                                                        <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/otstrojka> ,
+                                                                                                                                      <http://system.mentolog.org/resources/psicholPsichoanaliz> ;
+                                                                                        rdfs:label "Когнитивная психология - когнитивные структуры"@ru ;
+                                                                                        rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=123> .
+
+
+###  http://system.mentolog.org/resources/kognitivnaya_psikhologia_i_psikhoterapia
+<http://system.mentolog.org/resources/kognitivnaya_psikhologia_i_psikhoterapia> rdf:type owl:NamedIndividual ,
+                                                                                         <http://system.mentolog.org/classes/Text> ;
+                                                                                <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/otstrojka> ,
+                                                                                                                              <http://system.mentolog.org/resources/psicholPsichoanaliz> ;
+                                                                                rdfs:label "Когнитивная психология и психотерапия"@ru ;
+                                                                                rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=124> .
 
 
 ###  http://system.mentolog.org/resources/konferentsii
 <http://system.mentolog.org/resources/konferentsii> rdf:type owl:NamedIndividual ,
                                                              <http://system.mentolog.org/classes/Topic> ;
-                                                    <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/schemyUstDoklada> ,
-                                                                                                 <http://system.mentolog.org/resources/ustDoklad> ;
+                                                    <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/chtoVklyuchaetKazhdayaIzGruppKonfliktov> ,
+                                                                                                 <http://system.mentolog.org/resources/kakMenyatRusOnufriev> ,
+                                                                                                 <http://system.mentolog.org/resources/mentKakPonVSPYazKotov> ,
+                                                                                                 <http://system.mentolog.org/resources/pripIstFaktoryFormMentAntoni> ,
+                                                                                                 <http://system.mentolog.org/resources/problematizRusMentSleptsov> ,
+                                                                                                 <http://system.mentolog.org/resources/proyavlRusMentVYazykeProkopenko> ,
+                                                                                                 <http://system.mentolog.org/resources/schastePolovnikov> ,
+                                                                                                 <http://system.mentolog.org/resources/schemaRusMentOsennyaya> ,
+                                                                                                 <http://system.mentolog.org/resources/schemyUstDoklada> ,
+                                                                                                 <http://system.mentolog.org/resources/ustDoklad> ,
+                                                                                                 <http://system.mentolog.org/resources/vtorayaKonferenciyaKakTochkaOtschetaPerioda> ;
                                                     rdfs:label "Конференции"@ru .
 
 
 ###  http://system.mentolog.org/resources/konflictyMP
 <http://system.mentolog.org/resources/konflictyMP> rdf:type owl:NamedIndividual ,
                                                             <http://system.mentolog.org/classes/Topic> ;
-                                                   <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/schemyUstDoklada> ,
+                                                   <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/chtoVklyuchaetKazhdayaIzGruppKonfliktov> ,
+                                                                                                <http://system.mentolog.org/resources/schemyUstDoklada> ,
                                                                                                 <http://system.mentolog.org/resources/ustDoklad> ;
                                                    rdfs:label "Конфликты МП"@ru .
 
@@ -929,6 +1027,15 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                         rdfs:label "Контекст высшего"@ru .
 
 
+###  http://system.mentolog.org/resources/kriteriiOtstrojkyMPotPsihologii
+<http://system.mentolog.org/resources/kriteriiOtstrojkyMPotPsihologii> rdf:type owl:NamedIndividual ,
+                                                                                <http://system.mentolog.org/classes/Text> ;
+                                                                       <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/otstrojka> ,
+                                                                                                                     <http://system.mentolog.org/resources/psicholPsichoanaliz> ;
+                                                                       rdfs:label "Критерии отстройки психологии-терапии и МП"@ru ;
+                                                                       rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=592> .
+
+
 ###  http://system.mentolog.org/resources/lifeInMentalDimension
 <http://system.mentolog.org/resources/lifeInMentalDimension> rdf:type owl:NamedIndividual ,
                                                                       <http://system.mentolog.org/classes/Text> ;
@@ -951,7 +1058,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/lyudejNuzhnoLyubit
 <http://system.mentolog.org/resources/lyudejNuzhnoLyubit> rdf:type owl:NamedIndividual ,
                                                                    <http://system.mentolog.org/classes/Ustanovka> ;
-                                                          <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstOtnoshenij> ;
                                                           <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytLuchshim> ,
                                                                                                                 <http://system.mentolog.org/resources/pravilno> ;
                                                           <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/hotyatLuchshego> ,
@@ -960,12 +1066,40 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                                <http://system.mentolog.org/resources/pravoNaZhizn> ,
                                                                                                                <http://system.mentolog.org/resources/raznye> ,
                                                                                                                <http://system.mentolog.org/resources/vseHotyatSchastya> ;
+                                                          <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstOtnoshenij> ;
                                                           <http://system.mentolog.org/properties/rechovka> "До трех раз прощай!"@ru ,
                                                                                                            "Каждый хочет любви: и солдат и моряк"@ru ,
                                                                                                            "Легкую вину прощают"@ru ,
                                                                                                            "Невольная ошибка прощается"@ru ,
                                                                                                            "Нужно принимать человека, таким какой он есть"@ru ;
                                                           rdfs:label "Людей нужно любить"@ru .
+
+
+###  http://system.mentolog.org/resources/mP_i_Psikhoterapia_Kriterii_sravn
+<http://system.mentolog.org/resources/mP_i_Psikhoterapia_Kriterii_sravn> rdf:type owl:NamedIndividual ,
+                                                                                  <http://system.mentolog.org/classes/Text> ;
+                                                                         <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/otstrojka> ,
+                                                                                                                       <http://system.mentolog.org/resources/psicholPsichoanaliz> ;
+                                                                         rdfs:label "МП и психотерапия, критерии сравнения"@ru ;
+                                                                         rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=125> .
+
+
+###  http://system.mentolog.org/resources/mPkakteorijaIpraktikaMentalnosti
+<http://system.mentolog.org/resources/mPkakteorijaIpraktikaMentalnosti> rdf:type owl:NamedIndividual ,
+                                                                                 <http://system.mentolog.org/classes/Text> ;
+                                                                        <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/mentOsnovaniya> ,
+                                                                                                                      <http://system.mentolog.org/resources/oMP> ,
+                                                                                                                      <http://system.mentolog.org/resources/sodMyshleniya> ;
+                                                                        rdfs:label "Ментология как теория и практика ментальности"@ru ;
+                                                                        rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=597> .
+
+
+###  http://system.mentolog.org/resources/mPreklama
+<http://system.mentolog.org/resources/mPreklama> rdf:type owl:NamedIndividual ,
+                                                          <http://system.mentolog.org/classes/Text> ;
+                                                 <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/oMP> ;
+                                                 rdfs:label "Реклама МП"@ru ;
+                                                 rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=594> .
 
 
 ###  http://system.mentolog.org/resources/maloInformatsii
@@ -988,11 +1122,29 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=153> .
 
 
+###  http://system.mentolog.org/resources/mentKakPonVSPYazKotov
+<http://system.mentolog.org/resources/mentKakPonVSPYazKotov> rdf:type owl:NamedIndividual ,
+                                                                      <http://system.mentolog.org/classes/Text> ;
+                                                             <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/doklad> ,
+                                                                                                           <http://system.mentolog.org/resources/konferentsii> ,
+                                                                                                           <http://system.mentolog.org/resources/rezultatyAnaliza> ;
+                                                             rdfs:label "Доклад о мент как понятии соц-пол языка, Котов"@ru ;
+                                                             rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=583> .
+
+
 ###  http://system.mentolog.org/resources/mentOsnovaniya
 <http://system.mentolog.org/resources/mentOsnovaniya> rdf:type owl:NamedIndividual ,
                                                                <http://system.mentolog.org/classes/Topic> ;
-                                                      <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/mentAsTheoryAndPractice> ,
+                                                      <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/kakMenyatRusOnufriev> ,
+                                                                                                   <http://system.mentolog.org/resources/mPkakteorijaIpraktikaMentalnosti> ,
+                                                                                                   <http://system.mentolog.org/resources/mentAsTheoryAndPractice> ,
                                                                                                    <http://system.mentolog.org/resources/obEzoterike> ,
+                                                                                                   <http://system.mentolog.org/resources/pripIstFaktoryFormMentAntoni> ,
+                                                                                                   <http://system.mentolog.org/resources/problematizRusMentSleptsov> ,
+                                                                                                   <http://system.mentolog.org/resources/programmnyjKodCheloveka> ,
+                                                                                                   <http://system.mentolog.org/resources/proyavlRusMentVYazykeProkopenko> ,
+                                                                                                   <http://system.mentolog.org/resources/schastePolovnikov> ,
+                                                                                                   <http://system.mentolog.org/resources/schemaRusMentOsennyaya> ,
                                                                                                    <http://system.mentolog.org/resources/schemyUstDoklada> ,
                                                                                                    <http://system.mentolog.org/resources/ustDoklad> ,
                                                                                                    <http://system.mentolog.org/resources/whatIsMA> ;
@@ -1004,6 +1156,31 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                <http://system.mentolog.org/classes/Topic> ;
                                                       <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/mentAsTheoryAndPractice> ;
                                                       rdfs:label "Ментальные проблемы"@ru .
+
+
+###  http://system.mentolog.org/resources/mentologiyaDelaetSLyudmi
+<http://system.mentolog.org/resources/mentologiyaDelaetSLyudmi> rdf:type owl:NamedIndividual ,
+                                                                         <http://system.mentolog.org/classes/Text> ;
+                                                                <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/problemy> ;
+                                                                rdfs:label "Что ментология делает с людьми"@ru ;
+                                                                rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=239#p1237> .
+
+
+###  http://system.mentolog.org/resources/mentologiyaDelaetSMentologami
+<http://system.mentolog.org/resources/mentologiyaDelaetSMentologami> rdf:type owl:NamedIndividual ,
+                                                                              <http://system.mentolog.org/classes/Text> ;
+                                                                     <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/problemy> ;
+                                                                     rdfs:label "Что ментология делает с ментологами"@ru ;
+                                                                     rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=239#p1238> .
+
+
+###  http://system.mentolog.org/resources/mestoPodhodaVPraktikahRazvitiyaLyudej
+<http://system.mentolog.org/resources/mestoPodhodaVPraktikahRazvitiyaLyudej> rdf:type owl:NamedIndividual ,
+                                                                                      <http://system.mentolog.org/classes/Text> ;
+                                                                             <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/oMP> ,
+                                                                                                                           <http://system.mentolog.org/resources/problemy> ;
+                                                                             rdfs:label "Место подхода в практиках развития людей"@ru ;
+                                                                             rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=239#p1320> .
 
 
 ###  http://system.mentolog.org/resources/missiya
@@ -1021,6 +1198,25 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                rdfs:label "Мнения"@ru .
 
 
+###  http://system.mentolog.org/resources/nasledieMetapsihologiiKulturyUFrejda
+<http://system.mentolog.org/resources/nasledieMetapsihologiiKulturyUFrejda> rdf:type owl:NamedIndividual ,
+                                                                                     <http://system.mentolog.org/classes/Text> ;
+                                                                            <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/oMP> ,
+                                                                                                                          <http://system.mentolog.org/resources/psicholPsichoanaliz> ;
+                                                                            rdfs:label "Наследие метапсихологии культуры у Фрейда"@ru ;
+                                                                            rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=238#p1229> .
+
+
+###  http://system.mentolog.org/resources/nasledovaniePereocenkiVsekhCennostejUNicshe
+<http://system.mentolog.org/resources/nasledovaniePereocenkiVsekhCennostejUNicshe> rdf:type owl:NamedIndividual ,
+                                                                                            <http://system.mentolog.org/classes/Text> ;
+                                                                                   <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/idei> ,
+                                                                                                                                 <http://system.mentolog.org/resources/neReshVoprosy> ,
+                                                                                                                                 <http://system.mentolog.org/resources/oMP> ;
+                                                                                   rdfs:label "Наследование переоценки всех ценностей у Ницше"@ru ;
+                                                                                   rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=238#p1313> .
+
+
 ###  http://system.mentolog.org/resources/neBytHuzhe
 <http://system.mentolog.org/resources/neBytHuzhe> rdf:type owl:NamedIndividual ,
                                                            <http://system.mentolog.org/classes/Ustanovka> ;
@@ -1031,6 +1227,11 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/neBytOdnomu
 <http://system.mentolog.org/resources/neBytOdnomu> rdf:type owl:NamedIndividual ,
                                                             <http://system.mentolog.org/classes/Ustanovka> ;
+                                                   <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/hotyatLuchshego> ;
+                                                   <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/bytZhenshchinoj> ,
+                                                                                                        <http://system.mentolog.org/resources/lyudejNuzhnoLyubit> ,
+                                                                                                        <http://system.mentolog.org/resources/nichtozhen> ,
+                                                                                                        <http://system.mentolog.org/resources/nravitsyaLyudyam> ;
                                                    <http://system.mentolog.org/properties/daetProblemu> <http://system.mentolog.org/resources/otkazOtVazhnogo> ,
                                                                                                         <http://system.mentolog.org/resources/problemaNeblagodarnosti> ,
                                                                                                         <http://system.mentolog.org/resources/problemaProforientatsii> ,
@@ -1040,11 +1241,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                       <http://system.mentolog.org/resources/yaHoroshij> ,
                                                                                                       <http://system.mentolog.org/resources/yaVazhenDlyaDrugih> ;
                                                    <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstOtnoshenij> ;
-                                                   <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/hotyatLuchshego> ;
-                                                   <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/bytZhenshchinoj> ,
-                                                                                                        <http://system.mentolog.org/resources/lyudejNuzhnoLyubit> ,
-                                                                                                        <http://system.mentolog.org/resources/nichtozhen> ,
-                                                                                                        <http://system.mentolog.org/resources/nravitsyaLyudyam> ;
                                                    <http://system.mentolog.org/properties/rechovka> "В тесноте, да не в обиде"@ru ,
                                                                                                     "Два сапога пара"@ru ,
                                                                                                     "Один в поле не воин"@ru ,
@@ -1056,11 +1252,11 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/neBytSlabym
 <http://system.mentolog.org/resources/neBytSlabym> rdf:type owl:NamedIndividual ,
                                                             <http://system.mentolog.org/classes/Ustanovka> ;
-                                                   <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstSily> ;
                                                    <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/pravoNaZhizn> ;
                                                    <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/dvizhenie> ,
                                                                                                         <http://system.mentolog.org/resources/neBytHuzhe> ,
                                                                                                         <http://system.mentolog.org/resources/nichtozhen> ;
+                                                   <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstSily> ;
                                                    <http://system.mentolog.org/properties/rechovka> "Здесь для слабых места нет"@ru ,
                                                                                                     "Надо уметь постоять за себя"@ru ,
                                                                                                     "Нельзя давать слабину"@ru ,
@@ -1086,8 +1282,12 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/neReshVoprosy
 <http://system.mentolog.org/resources/neReshVoprosy> rdf:type owl:NamedIndividual ,
                                                               <http://system.mentolog.org/classes/Topic> ;
-                                                     <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/schemyUstDoklada> ,
-                                                                                                  <http://system.mentolog.org/resources/ustDoklad> ;
+                                                     <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/nasledovaniePereocenkiVsekhCennostejUNicshe> ,
+                                                                                                  <http://system.mentolog.org/resources/schemyUstDoklada> ,
+                                                                                                  <http://system.mentolog.org/resources/sistemnyeOgranicheniyaTemnyePyatnaVteoriiPraktikeMT> ,
+                                                                                                  <http://system.mentolog.org/resources/ustDoklad> ,
+                                                                                                  <http://system.mentolog.org/resources/vtorayaKonferenciyaKakTochkaOtschetaPerioda> ,
+                                                                                                  <http://system.mentolog.org/resources/zadachiSpecializaciiMP> ;
                                                      rdfs:label "Нерешенные вопросы"@ru .
 
 
@@ -1113,7 +1313,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                    <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/schemyUstDoklada> ,
                                                                                                 <http://system.mentolog.org/resources/ustDoklad> ;
                                                    rdfs:comment "О том, в чем допущены ошибки, почему это ошибки. Часто из тектов этой темы как раз можно извлечь логику принятия решений."@ru ;
-												   rdfs:label "Сделанное неправильно"@ru .
+                                                   rdfs:label "Сделанное неправильно"@ru .
 
 
 ###  http://system.mentolog.org/resources/nezhelanieMenyatsya
@@ -1147,7 +1347,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/nichtozhen
 <http://system.mentolog.org/resources/nichtozhen> rdf:type owl:NamedIndividual ,
                                                            <http://system.mentolog.org/classes/Ustanovka> ;
-                                                  <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstVlasti> ;
                                                   <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytSilnym> ,
                                                                                                         <http://system.mentolog.org/resources/svyazano> ;
                                                   <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/dvizhenie> ,
@@ -1160,6 +1359,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                        <http://system.mentolog.org/resources/pravilno> ,
                                                                                                        <http://system.mentolog.org/resources/predel> ,
                                                                                                        <http://system.mentolog.org/resources/vysshee> ;
+                                                  <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstVlasti> ;
                                                   <http://system.mentolog.org/properties/rechovka> "Всему своё время"@ru ,
                                                                                                    "Всяк сверчок знай свой шесток"@ru ,
                                                                                                    "Не подмажешь – не поедешь"@ru ,
@@ -1185,12 +1385,12 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/nuzhnoVerit
 <http://system.mentolog.org/resources/nuzhnoVerit> rdf:type owl:NamedIndividual ,
                                                             <http://system.mentolog.org/classes/Ustanovka> ;
-                                                   <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstVlasti> ,
-                                                                                                    <http://system.mentolog.org/resources/kontekstVysshego> ;
                                                    <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/razumny> ;
                                                    <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/estSmysl> ,
                                                                                                         <http://system.mentolog.org/resources/istina> ,
                                                                                                         <http://system.mentolog.org/resources/vysshee> ;
+                                                   <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstVlasti> ,
+                                                                                                    <http://system.mentolog.org/resources/kontekstVysshego> ;
                                                    <http://system.mentolog.org/properties/rechovka> "Вера, надежда, любовь"@ru ,
                                                                                                     "Верь в лучшее, а готовься к худшему"@ru ,
                                                                                                     "Надежда - мой компас земной"@ru ,
@@ -1202,8 +1402,15 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/oMP
 <http://system.mentolog.org/resources/oMP> rdf:type owl:NamedIndividual ,
                                                     <http://system.mentolog.org/classes/Topic> ;
-                                           <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/lifeInMentalDimension> ,
+                                           <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/interviewSmentologom> ,
+                                                                                        <http://system.mentolog.org/resources/lifeInMentalDimension> ,
+                                                                                        <http://system.mentolog.org/resources/mPkakteorijaIpraktikaMentalnosti> ,
+                                                                                        <http://system.mentolog.org/resources/mPreklama> ,
                                                                                         <http://system.mentolog.org/resources/mentAsTheoryAndPractice> ,
+                                                                                        <http://system.mentolog.org/resources/mestoPodhodaVPraktikahRazvitiyaLyudej> ,
+                                                                                        <http://system.mentolog.org/resources/nasledieMetapsihologiiKulturyUFrejda> ,
+                                                                                        <http://system.mentolog.org/resources/nasledovaniePereocenkiVsekhCennostejUNicshe> ,
+                                                                                        <http://system.mentolog.org/resources/programmnyjKodCheloveka> ,
                                                                                         <http://system.mentolog.org/resources/whatIsMA> ;
                                            rdfs:label "О МП"@ru .
 
@@ -1232,10 +1439,37 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/obuchenieMP
 <http://system.mentolog.org/resources/obuchenieMP> rdf:type owl:NamedIndividual ,
                                                             <http://system.mentolog.org/classes/Topic> ;
-                                                   <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/schemyUstDoklada> ,
+                                                   <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/osnTrudnostiOsvoeniyaMPnaMaterialahMetodseminara> ,
+                                                                                                <http://system.mentolog.org/resources/problemaSohraneniyaSredyKakObrazuyushchegoFaktora> ,
+                                                                                                <http://system.mentolog.org/resources/schemyUstDoklada> ,
                                                                                                 <http://system.mentolog.org/resources/trainingProgramme> ,
                                                                                                 <http://system.mentolog.org/resources/ustDoklad> ;
                                                    rdfs:label "Обучение МП"@ru .
+
+
+###  http://system.mentolog.org/resources/opyt
+<http://system.mentolog.org/resources/opyt> rdf:type owl:NamedIndividual ,
+                                                     <http://system.mentolog.org/classes/Topic> ;
+                                            rdfs:label "Опыт"@ru .
+
+
+###  http://system.mentolog.org/resources/osnDokPoOtstrojke
+<http://system.mentolog.org/resources/osnDokPoOtstrojke> rdf:type owl:NamedIndividual ,
+                                                                  <http://system.mentolog.org/classes/Text> ;
+                                                         <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/otstrojka> ,
+                                                                                                       <http://system.mentolog.org/resources/psicholPsichoanaliz> ;
+                                                         rdfs:label "Основной документ по отстройке 090812"@ru ;
+                                                         rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=593> .
+
+
+###  http://system.mentolog.org/resources/osnTrudnostiOsvoeniyaMPnaMaterialahMetodseminara
+<http://system.mentolog.org/resources/osnTrudnostiOsvoeniyaMPnaMaterialahMetodseminara> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://system.mentolog.org/classes/Text> ;
+                                                                                        <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/obuchenieMP> ,
+                                                                                                                                      <http://system.mentolog.org/resources/problemy> ,
+                                                                                                                                      <http://system.mentolog.org/resources/rezultatyAnaliza> ;
+                                                                                        rdfs:label "Основные трудности освоения МП"@ru ;
+                                                                                        rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=244#p1329> .
 
 
 ###  http://system.mentolog.org/resources/osnZadachiTransfera
@@ -1247,10 +1481,22 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                            rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=40&t=261> .
 
 
+###  http://system.mentolog.org/resources/otchetTeorGruppyZa13i14
+<http://system.mentolog.org/resources/otchetTeorGruppyZa13i14> rdf:type owl:NamedIndividual ,
+                                                                        <http://system.mentolog.org/classes/Text> ;
+                                                               <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/otchety> ,
+                                                                                                             <http://system.mentolog.org/resources/rezultatyAnaliza> ,
+                                                                                                             <http://system.mentolog.org/resources/teorija> ;
+                                                               rdfs:label "Отчет о работе теор.группы за первый год 13-14"@ru ;
+                                                               rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=100> .
+
+
 ###  http://system.mentolog.org/resources/otchety
 <http://system.mentolog.org/resources/otchety> rdf:type owl:NamedIndividual ,
                                                         <http://system.mentolog.org/classes/Topic> ;
                                                <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/AT_17_09_14> ,
+                                                                                            <http://system.mentolog.org/resources/god2016vTomske> ,
+                                                                                            <http://system.mentolog.org/resources/otchetTeorGruppyZa13i14> ,
                                                                                             <http://system.mentolog.org/resources/schemyUstDoklada> ,
                                                                                             <http://system.mentolog.org/resources/ustDoklad> ;
                                                rdfs:label "Отчеты"@ru .
@@ -1260,6 +1506,48 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 <http://system.mentolog.org/resources/otkazOtVazhnogo> rdf:type owl:NamedIndividual ,
                                                                 <http://system.mentolog.org/classes/Problema> ;
                                                        rdfs:label "Отказ от важного"@ru .
+
+
+###  http://system.mentolog.org/resources/otstrojka
+<http://system.mentolog.org/resources/otstrojka> rdf:type owl:NamedIndividual ,
+                                                          <http://system.mentolog.org/classes/Topic> ;
+                                                 <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/introekciyaVgeshtaltTerapii> ,
+                                                                                              <http://system.mentolog.org/resources/kognitivnaya_psikhologia_-_kognitivnye_struktury> ,
+                                                                                              <http://system.mentolog.org/resources/kognitivnaya_psikhologia_i_psikhoterapia> ,
+                                                                                              <http://system.mentolog.org/resources/kriteriiOtstrojkyMPotPsihologii> ,
+                                                                                              <http://system.mentolog.org/resources/mP_i_Psikhoterapia_Kriterii_sravn> ,
+                                                                                              <http://system.mentolog.org/resources/osnDokPoOtstrojke> ,
+                                                                                              <http://system.mentolog.org/resources/otstrojkaMPotPsihologii2> ,
+                                                                                              <http://system.mentolog.org/resources/otstrojkaMPotPsihologii4> ,
+                                                                                              <http://system.mentolog.org/resources/otstrojkaMPotPsihologii5> ;
+                                                 rdfs:label "Отстройка"@ru .
+
+
+###  http://system.mentolog.org/resources/otstrojkaMPotPsihologii2
+<http://system.mentolog.org/resources/otstrojkaMPotPsihologii2> rdf:type owl:NamedIndividual ,
+                                                                         <http://system.mentolog.org/classes/Text> ;
+                                                                <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/otstrojka> ,
+                                                                                                              <http://system.mentolog.org/resources/psicholPsichoanaliz> ;
+                                                                rdfs:label "Отстройка ментологии от психологии 2.0"@ru ;
+                                                                rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=121> .
+
+
+###  http://system.mentolog.org/resources/otstrojkaMPotPsihologii4
+<http://system.mentolog.org/resources/otstrojkaMPotPsihologii4> rdf:type owl:NamedIndividual ,
+                                                                         <http://system.mentolog.org/classes/Text> ;
+                                                                <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/otstrojka> ,
+                                                                                                              <http://system.mentolog.org/resources/psicholPsichoanaliz> ;
+                                                                rdfs:label "Отстройка ментологии от психологии 4.0"@ru ;
+                                                                rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=229> .
+
+
+###  http://system.mentolog.org/resources/otstrojkaMPotPsihologii5
+<http://system.mentolog.org/resources/otstrojkaMPotPsihologii5> rdf:type owl:NamedIndividual ,
+                                                                         <http://system.mentolog.org/classes/Text> ;
+                                                                <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/otstrojka> ,
+                                                                                                              <http://system.mentolog.org/resources/psicholPsichoanaliz> ;
+                                                                rdfs:label "Отстройка ментологии от психологии 5.0"@ru ;
+                                                                rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=232> .
 
 
 ###  http://system.mentolog.org/resources/perevod
@@ -1299,7 +1587,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/pokoj
 <http://system.mentolog.org/resources/pokoj> rdf:type owl:NamedIndividual ,
                                                       <http://system.mentolog.org/classes/Ustanovka> ;
-                                             <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPokoya> ;
                                              <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytSilnym> ,
                                                                                                    <http://system.mentolog.org/resources/dvizhenie> ;
                                              <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/estSmysl> ,
@@ -1307,6 +1594,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                   <http://system.mentolog.org/resources/predel> ,
                                                                                                   <http://system.mentolog.org/resources/prosto> ,
                                                                                                   <http://system.mentolog.org/resources/svyazano> ;
+                                             <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPokoya> ;
                                              <http://system.mentolog.org/properties/rechovka> "А в тюрьме щас ужин, макароны"@ru ,
                                                                                               "Баба с возу -- кобыле легче"@ru ,
                                                                                               "Бежать впереди паровоза"@ru ,
@@ -1342,7 +1630,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/pravilno
 <http://system.mentolog.org/resources/pravilno> rdf:type owl:NamedIndividual ,
                                                          <http://system.mentolog.org/classes/Ustanovka> ;
-                                                <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPravilnogo> ;
                                                 <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytLuchshim> ,
                                                                                                       <http://system.mentolog.org/resources/bytZhenshchinoj> ,
                                                                                                       <http://system.mentolog.org/resources/estestvenno> ,
@@ -1358,6 +1645,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                      <http://system.mentolog.org/resources/istina> ,
                                                                                                      <http://system.mentolog.org/resources/nichtozhen> ,
                                                                                                      <http://system.mentolog.org/resources/poMoemu> ;
+                                                <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPravilnogo> ;
                                                 <http://system.mentolog.org/properties/rechovka> "Береги честь смолоду"@ru ,
                                                                                                  "В чужой монастырь со своим уставом не ходят"@ru ,
                                                                                                  "Всему свое время"@ru ,
@@ -1372,7 +1660,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/pravoNaZhizn
 <http://system.mentolog.org/resources/pravoNaZhizn> rdf:type owl:NamedIndividual ,
                                                              <http://system.mentolog.org/classes/Ustanovka> ;
-                                                    <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstUnikalnosti> ;
                                                     <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytLuchshim> ,
                                                                                                           <http://system.mentolog.org/resources/neBytSlabym> ;
                                                     <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/estSmysl> ,
@@ -1380,6 +1667,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                          <http://system.mentolog.org/resources/nePrichinyatBol> ,
                                                                                                          <http://system.mentolog.org/resources/raznye> ,
                                                                                                          <http://system.mentolog.org/resources/spravedlivost> ;
+                                                    <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstUnikalnosti> ;
                                                     <http://system.mentolog.org/properties/rechovka> "В каждом есть своя искра"@ru ,
                                                                                                      "Каждый человек уникален и ценен по своему"@ru ,
                                                                                                      "Любого человека можно понять, простить"@ru ,
@@ -1391,7 +1679,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/predel
 <http://system.mentolog.org/resources/predel> rdf:type owl:NamedIndividual ,
                                                        <http://system.mentolog.org/classes/Ustanovka> ;
-                                              <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstKonechnosti> ;
                                               <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytLuchshim> ,
                                                                                                     <http://system.mentolog.org/resources/dvizhenie> ,
                                                                                                     <http://system.mentolog.org/resources/hotyatLuchshego> ,
@@ -1400,6 +1687,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                    <http://system.mentolog.org/resources/estestvenno> ,
                                                                                                    <http://system.mentolog.org/resources/nichtozhen> ,
                                                                                                    <http://system.mentolog.org/resources/pokoj> ;
+                                              <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstKonechnosti> ;
                                               <http://system.mentolog.org/properties/rechovka> "Береги честь смолоду"@ru ,
                                                                                                "Все когда-нибудь закончится"@ru ,
                                                                                                "Всему есть предел"@ru ,
@@ -1408,12 +1696,31 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                               rdfs:label "Все имеет предел"@ru .
 
 
+###  http://system.mentolog.org/resources/prichinyDrobleniyaPsihoanaliza
+<http://system.mentolog.org/resources/prichinyDrobleniyaPsihoanaliza> rdf:type owl:NamedIndividual ,
+                                                                               <http://system.mentolog.org/classes/Text> ;
+                                                                      <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/psicholPsichoanaliz> ;
+                                                                      rdfs:label "Причины дробления психоанализа на различные школы"@ru ;
+                                                                      rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=238#p1321> .
+
+
 ###  http://system.mentolog.org/resources/printsipy
 <http://system.mentolog.org/resources/printsipy> rdf:type owl:NamedIndividual ,
                                                           <http://system.mentolog.org/classes/Topic> ;
                                                  <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/schemyUstDoklada> ,
                                                                                               <http://system.mentolog.org/resources/ustDoklad> ;
                                                  rdfs:label "Принципы принятия решений"@ru .
+
+
+###  http://system.mentolog.org/resources/pripIstFaktoryFormMentAntoni
+<http://system.mentolog.org/resources/pripIstFaktoryFormMentAntoni> rdf:type owl:NamedIndividual ,
+                                                                             <http://system.mentolog.org/classes/Text> ;
+                                                                    <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/doklad> ,
+                                                                                                                  <http://system.mentolog.org/resources/konferentsii> ,
+                                                                                                                  <http://system.mentolog.org/resources/mentOsnovaniya> ,
+                                                                                                                  <http://system.mentolog.org/resources/rezultatyAnaliza> ;
+                                                                    rdfs:label "Доклад о прир. и ист. факторах формирования мент., Антони"@ru ;
+                                                                    rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=584> .
 
 
 ###  http://system.mentolog.org/resources/problemaNeblagodarnosti
@@ -1428,29 +1735,103 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                rdfs:label "Проблема профориентации"@ru .
 
 
+###  http://system.mentolog.org/resources/problemaSohraneniyaSredyKakObrazuyushchegoFaktora
+<http://system.mentolog.org/resources/problemaSohraneniyaSredyKakObrazuyushchegoFaktora> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://system.mentolog.org/classes/Text> ;
+                                                                                         <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/obuchenieMP> ,
+                                                                                                                                       <http://system.mentolog.org/resources/problemy> ,
+                                                                                                                                       <http://system.mentolog.org/resources/rezultatyAnaliza> ;
+                                                                                         rdfs:label "Проблема сохранения среды как образующего фактора"@ru ;
+                                                                                         rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=428> .
+
+
+###  http://system.mentolog.org/resources/problematizRusMentSleptsov
+<http://system.mentolog.org/resources/problematizRusMentSleptsov> rdf:type owl:NamedIndividual ,
+                                                                           <http://system.mentolog.org/classes/Text> ;
+                                                                  <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/doklad> ,
+                                                                                                                <http://system.mentolog.org/resources/konferentsii> ,
+                                                                                                                <http://system.mentolog.org/resources/mentOsnovaniya> ,
+                                                                                                                <http://system.mentolog.org/resources/rezultatyAnaliza> ;
+                                                                  rdfs:label "Доклад о проблематизации рус ментальности, Слепцов"@ru ;
+                                                                  rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=580> .
+
+
 ###  http://system.mentolog.org/resources/problemy
 <http://system.mentolog.org/resources/problemy> rdf:type owl:NamedIndividual ,
                                                          <http://system.mentolog.org/classes/Topic> ;
-                                                <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/schemyUstDoklada> ,
-                                                                                             <http://system.mentolog.org/resources/ustDoklad> ;
+                                                <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/god2016vTomske> ,
+                                                                                             <http://system.mentolog.org/resources/mentologiyaDelaetSLyudmi> ,
+                                                                                             <http://system.mentolog.org/resources/mentologiyaDelaetSMentologami> ,
+                                                                                             <http://system.mentolog.org/resources/mestoPodhodaVPraktikahRazvitiyaLyudej> ,
+                                                                                             <http://system.mentolog.org/resources/osnTrudnostiOsvoeniyaMPnaMaterialahMetodseminara> ,
+                                                                                             <http://system.mentolog.org/resources/problemaSohraneniyaSredyKakObrazuyushchegoFaktora> ,
+                                                                                             <http://system.mentolog.org/resources/schemyUstDoklada> ,
+                                                                                             <http://system.mentolog.org/resources/tekhnologizaciyaObrazovaniyaVmestoTekhnologizaciiMP> ,
+                                                                                             <http://system.mentolog.org/resources/ustDoklad> ,
+                                                                                             <http://system.mentolog.org/resources/vtorayaKonferenciyaKakTochkaOtschetaPerioda> ;
                                                 rdfs:label "Проблемы"@ru .
+
+
+###  http://system.mentolog.org/resources/programmnyjKodCheloveka
+<http://system.mentolog.org/resources/programmnyjKodCheloveka> rdf:type owl:NamedIndividual ,
+                                                                        <http://system.mentolog.org/classes/Text> ;
+                                                               <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/mentOsnovaniya> ,
+                                                                                                             <http://system.mentolog.org/resources/oMP> ;
+                                                               rdfs:label "Программный код человека помещается на А4"@ru ;
+                                                               rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=592> ,
+                                                                            <http://mentally.eu/mentologiya/programmnyj-kod-lyubogo-cheloveka-pomeshhaetsya-na-list-a4/> .
+
+
+###  http://system.mentolog.org/resources/programmy
+<http://system.mentolog.org/resources/programmy> rdf:type owl:NamedIndividual ,
+                                                          <http://system.mentolog.org/classes/Topic> ;
+                                                 <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/trainingProgramme> ;
+                                                 rdfs:label "Программы"@ru .
 
 
 ###  http://system.mentolog.org/resources/prosto
 <http://system.mentolog.org/resources/prosto> rdf:type owl:NamedIndividual ,
                                                        <http://system.mentolog.org/classes/Ustanovka> ;
-                                              <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstProstoty> ,
-                                                                                               <http://system.mentolog.org/resources/kontekstVygody> ;
                                               <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/hotyatLuchshego> ,
                                                                                                     <http://system.mentolog.org/resources/pravilno> ;
                                               <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/estestvenno> ,
                                                                                                    <http://system.mentolog.org/resources/pokoj> ,
                                                                                                    <http://system.mentolog.org/resources/vseHotyatSchastya> ;
+                                              <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstProstoty> ,
+                                                                                               <http://system.mentolog.org/resources/kontekstVygody> ;
                                               <http://system.mentolog.org/properties/rechovka> "Будь проще и люди к тебе потянутся"@ru ,
                                                                                                "Живи просто — проживешь лет сто"@ru ,
                                                                                                "Лучшее решение из возможных — самое простое"@ru ,
                                                                                                "Не ищи мудрости, ищи простоты"@ru ;
                                               rdfs:label "Все должно быть просто"@ru .
+
+
+###  http://system.mentolog.org/resources/proyavlRusMentVYazykeProkopenko
+<http://system.mentolog.org/resources/proyavlRusMentVYazykeProkopenko> rdf:type owl:NamedIndividual ,
+                                                                                <http://system.mentolog.org/classes/Text> ;
+                                                                       <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/doklad> ,
+                                                                                                                     <http://system.mentolog.org/resources/konferentsii> ,
+                                                                                                                     <http://system.mentolog.org/resources/mentOsnovaniya> ,
+                                                                                                                     <http://system.mentolog.org/resources/rezultatyAnaliza> ;
+                                                                       rdfs:label "Доклад о проявлении ментальности в рус языке, Прокопенко"@ru ;
+                                                                       rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=581> .
+
+
+###  http://system.mentolog.org/resources/psicholPsichoanaliz
+<http://system.mentolog.org/resources/psicholPsichoanaliz> rdf:type owl:NamedIndividual ,
+                                                                    <http://system.mentolog.org/classes/Topic> ;
+                                                           <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/introekciyaVgeshtaltTerapii> ,
+                                                                                                        <http://system.mentolog.org/resources/kognitivnaya_psikhologia_-_kognitivnye_struktury> ,
+                                                                                                        <http://system.mentolog.org/resources/kognitivnaya_psikhologia_i_psikhoterapia> ,
+                                                                                                        <http://system.mentolog.org/resources/kriteriiOtstrojkyMPotPsihologii> ,
+                                                                                                        <http://system.mentolog.org/resources/mP_i_Psikhoterapia_Kriterii_sravn> ,
+                                                                                                        <http://system.mentolog.org/resources/nasledieMetapsihologiiKulturyUFrejda> ,
+                                                                                                        <http://system.mentolog.org/resources/osnDokPoOtstrojke> ,
+                                                                                                        <http://system.mentolog.org/resources/otstrojkaMPotPsihologii2> ,
+                                                                                                        <http://system.mentolog.org/resources/otstrojkaMPotPsihologii4> ,
+                                                                                                        <http://system.mentolog.org/resources/otstrojkaMPotPsihologii5> ,
+                                                                                                        <http://system.mentolog.org/resources/prichinyDrobleniyaPsihoanaliza> ;
+                                                           rdfs:label "Психология и психоанализ"@ru .
 
 
 ###  http://system.mentolog.org/resources/psihologicheskijSlovar
@@ -1472,13 +1853,13 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/raznye
 <http://system.mentolog.org/resources/raznye> rdf:type owl:NamedIndividual ,
                                                        <http://system.mentolog.org/classes/Ustanovka> ;
-                                              <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstUnikalnosti> ;
                                               <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/bytLuchshim> ,
                                                                                                     <http://system.mentolog.org/resources/pravilno> ;
                                               <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/bytSoboj> ,
                                                                                                    <http://system.mentolog.org/resources/lyudejNuzhnoLyubit> ,
                                                                                                    <http://system.mentolog.org/resources/neReshatZaDrugich> ,
                                                                                                    <http://system.mentolog.org/resources/pravoNaZhizn> ;
+                                              <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstUnikalnosti> ;
                                               <http://system.mentolog.org/properties/rechovka> "В каждом есть что-то особенное"@ru ,
                                                                                                "К каждому нужен особый подход"@ru ,
                                                                                                "Каждый человек уникальный по-своему"@ru ,
@@ -1516,6 +1897,14 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                rdfs:label "Человек существо разумное"@ru .
 
 
+###  http://system.mentolog.org/resources/razvitieMPvRusskomMireZaPredelamiRFprimenenieProdvizhenie
+<http://system.mentolog.org/resources/razvitieMPvRusskomMireZaPredelamiRFprimenenieProdvizhenie> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://system.mentolog.org/classes/Text> ;
+                                                                                                 <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/zadachi> ;
+                                                                                                 rdfs:label "Развитие МП в русском мире за пределами России, его применение и продвижение"@ru ;
+                                                                                                 rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=245#p1230> .
+
+
 ###  http://system.mentolog.org/resources/reshVoprosy
 <http://system.mentolog.org/resources/reshVoprosy> rdf:type owl:NamedIndividual ,
                                                             <http://system.mentolog.org/classes/Topic> ;
@@ -1527,17 +1916,52 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/rezultatyAnaliza
 <http://system.mentolog.org/resources/rezultatyAnaliza> rdf:type owl:NamedIndividual ,
                                                                  <http://system.mentolog.org/classes/Topic> ;
-                                                        <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/podschetVhozhdenijISlovar> ,
+                                                        <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/god2016vTomske> ,
+                                                                                                     <http://system.mentolog.org/resources/kakMenyatRusOnufriev> ,
+                                                                                                     <http://system.mentolog.org/resources/mentKakPonVSPYazKotov> ,
+                                                                                                     <http://system.mentolog.org/resources/osnTrudnostiOsvoeniyaMPnaMaterialahMetodseminara> ,
+                                                                                                     <http://system.mentolog.org/resources/otchetTeorGruppyZa13i14> ,
+                                                                                                     <http://system.mentolog.org/resources/podschetVhozhdenijISlovar> ,
+                                                                                                     <http://system.mentolog.org/resources/pripIstFaktoryFormMentAntoni> ,
+                                                                                                     <http://system.mentolog.org/resources/problemaSohraneniyaSredyKakObrazuyushchegoFaktora> ,
+                                                                                                     <http://system.mentolog.org/resources/problematizRusMentSleptsov> ,
+                                                                                                     <http://system.mentolog.org/resources/proyavlRusMentVYazykeProkopenko> ,
                                                                                                      <http://system.mentolog.org/resources/psihologicheskijSlovar> ,
+                                                                                                     <http://system.mentolog.org/resources/schastePolovnikov> ,
+                                                                                                     <http://system.mentolog.org/resources/schemaRusMentOsennyaya> ,
                                                                                                      <http://system.mentolog.org/resources/schemyUstDoklada> ,
-                                                                                                     <http://system.mentolog.org/resources/ustDoklad> ;
+                                                                                                     <http://system.mentolog.org/resources/ustDoklad> ,
+                                                                                                     <http://system.mentolog.org/resources/vtorayaKonferenciyaKakTochkaOtschetaPerioda> ;
                                                         rdfs:label "Результаты анализа"@ru .
+
+
+###  http://system.mentolog.org/resources/schastePolovnikov
+<http://system.mentolog.org/resources/schastePolovnikov> rdf:type owl:NamedIndividual ,
+                                                                  <http://system.mentolog.org/classes/Text> ;
+                                                         <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/doklad> ,
+                                                                                                       <http://system.mentolog.org/resources/konferentsii> ,
+                                                                                                       <http://system.mentolog.org/resources/mentOsnovaniya> ,
+                                                                                                       <http://system.mentolog.org/resources/rezultatyAnaliza> ;
+                                                         rdfs:label "Доклад о счастье, Половников"@ru ;
+                                                         rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=578> .
+
+
+###  http://system.mentolog.org/resources/schemaRusMentOsennyaya
+<http://system.mentolog.org/resources/schemaRusMentOsennyaya> rdf:type owl:NamedIndividual ,
+                                                                       <http://system.mentolog.org/classes/Text> ;
+                                                              <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/doklad> ,
+                                                                                                            <http://system.mentolog.org/resources/konferentsii> ,
+                                                                                                            <http://system.mentolog.org/resources/mentOsnovaniya> ,
+                                                                                                            <http://system.mentolog.org/resources/rezultatyAnaliza> ;
+                                                              rdfs:label "Доклад о схематизации ментальности, Осенняя"@ru ;
+                                                              rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=579> .
 
 
 ###  http://system.mentolog.org/resources/schemyUstDoklada
 <http://system.mentolog.org/resources/schemyUstDoklada> rdf:type owl:NamedIndividual ,
                                                                  <http://system.mentolog.org/classes/Text> ;
                                                         <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/anglotransfer> ,
+                                                                                                      <http://system.mentolog.org/resources/associaciya> ,
                                                                                                       <http://system.mentolog.org/resources/doklad> ,
                                                                                                       <http://system.mentolog.org/resources/konferentsii> ,
                                                                                                       <http://system.mentolog.org/resources/konflictyMP> ,
@@ -1566,6 +1990,15 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                          <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstOtnoshenij> ;
                                                          <http://system.mentolog.org/properties/rechovka> "Себя не полюбишь -- никто не полюбит"@ru ;
                                                          rdfs:label "Себя нужно любить"@ru .
+
+
+###  http://system.mentolog.org/resources/sistemnyeOgranicheniyaTemnyePyatnaVteoriiPraktikeMT
+<http://system.mentolog.org/resources/sistemnyeOgranicheniyaTemnyePyatnaVteoriiPraktikeMT> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://system.mentolog.org/classes/Text> ;
+                                                                                           <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/neReshVoprosy> ,
+                                                                                                                                         <http://system.mentolog.org/resources/sodMyshleniya> ;
+                                                                                           rdfs:label "О системных ограничениях и темных пятнах в теории и практике ментальных технологий"@ru ;
+                                                                                           rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=21&t=29#p203> .
 
 
 ###  http://system.mentolog.org/resources/slovar
@@ -1599,9 +2032,12 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/sodMyshleniya
 <http://system.mentolog.org/resources/sodMyshleniya> rdf:type owl:NamedIndividual ,
                                                               <http://system.mentolog.org/classes/Topic> ;
-                                                     <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/kluchIdejRusskojYazikovojKartinyMira> ,
+                                                     <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/interviewSmentologom> ,
+                                                                                                  <http://system.mentolog.org/resources/kluchIdejRusskojYazikovojKartinyMira> ,
+                                                                                                  <http://system.mentolog.org/resources/mPkakteorijaIpraktikaMentalnosti> ,
                                                                                                   <http://system.mentolog.org/resources/obEzoterike> ,
                                                                                                   <http://system.mentolog.org/resources/schemyUstDoklada> ,
+                                                                                                  <http://system.mentolog.org/resources/sistemnyeOgranicheniyaTemnyePyatnaVteoriiPraktikeMT> ,
                                                                                                   <http://system.mentolog.org/resources/ustDoklad> ;
                                                      rdfs:label "Содержания мышления"@ru .
 
@@ -1652,9 +2088,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/svyazano
 <http://system.mentolog.org/resources/svyazano> rdf:type owl:NamedIndividual ,
                                                          <http://system.mentolog.org/classes/Ustanovka> ;
-                                                <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstOtvetstvennosti> ,
-                                                                                                 <http://system.mentolog.org/resources/kontekstPredskazuemosti> ,
-                                                                                                 <http://system.mentolog.org/resources/kontekstSpravedlivosti> ;
                                                 <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/dvizhenie> ,
                                                                                                       <http://system.mentolog.org/resources/nichtozhen> ;
                                                 <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/estPrichina> ,
@@ -1662,12 +2095,31 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                      <http://system.mentolog.org/resources/pokoj> ,
                                                                                                      <http://system.mentolog.org/resources/spravedlivost> ,
                                                                                                      <http://system.mentolog.org/resources/vysshee> ;
+                                                <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstOtvetstvennosti> ,
+                                                                                                 <http://system.mentolog.org/resources/kontekstPredskazuemosti> ,
+                                                                                                 <http://system.mentolog.org/resources/kontekstSpravedlivosti> ;
                                                 <http://system.mentolog.org/properties/rechovka> "Взмах крыла бабочки на одном континенте может вызвать землетрясение на другом"@ru ,
                                                                                                  "Делай добро и оно обязательно вернется"@ru ,
                                                                                                  "Не рой другому яму - сам в неё попадёшь"@ru ,
                                                                                                  "Скупой платит дважды"@ru ,
                                                                                                  "Случайности не случайны"@ru ;
                                                 rdfs:label "Все со всем связано"@ru .
+
+
+###  http://system.mentolog.org/resources/tekhnologizaciyaObrazovaniyaVmestoTekhnologizaciiMP
+<http://system.mentolog.org/resources/tekhnologizaciyaObrazovaniyaVmestoTekhnologizaciiMP> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://system.mentolog.org/classes/Text> ;
+                                                                                           <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/problemy> ,
+                                                                                                                                         <http://system.mentolog.org/resources/zadachi> ;
+                                                                                           rdfs:label "Технологизация образования вместо технологизации подхода"@ru ;
+                                                                                           rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=242#p1257> .
+
+
+###  http://system.mentolog.org/resources/teorija
+<http://system.mentolog.org/resources/teorija> rdf:type owl:NamedIndividual ,
+                                                        <http://system.mentolog.org/classes/Topic> ;
+                                               <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/otchetTeorGruppyZa13i14> ;
+                                               rdfs:label "Теория"@ru .
 
 
 ###  http://system.mentolog.org/resources/terpimost
@@ -1700,7 +2152,8 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                   <http://system.mentolog.org/classes/Text> ;
                                                          <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/anglotransfer> ,
                                                                                                        <http://system.mentolog.org/resources/obuchenieMP> ,
-                                                                                                       <http://system.mentolog.org/resources/perevod> ;
+                                                                                                       <http://system.mentolog.org/resources/perevod> ,
+                                                                                                       <http://system.mentolog.org/resources/programmy> ;
                                                          rdfs:label "Training programme"@en ;
                                                          rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=163> .
 
@@ -1719,6 +2172,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 <http://system.mentolog.org/resources/ustDoklad> rdf:type owl:NamedIndividual ,
                                                           <http://system.mentolog.org/classes/Text> ;
                                                  <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/anglotransfer> ,
+                                                                                               <http://system.mentolog.org/resources/associaciya> ,
                                                                                                <http://system.mentolog.org/resources/doklad> ,
                                                                                                <http://system.mentolog.org/resources/konferentsii> ,
                                                                                                <http://system.mentolog.org/resources/konflictyMP> ,
@@ -1736,8 +2190,8 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                <http://system.mentolog.org/resources/sodMyshleniya> ,
                                                                                                <http://system.mentolog.org/resources/tseliMP> ,
                                                                                                <http://system.mentolog.org/resources/zadachi> ;
+                                                 rdfs:comment "Широко описана стратегия дальнейшего развития МП и сообщества, описаны проблемы и нерешенные вопросы, а также решения. Приведены также примеры ментальных оснований ментологов, поставлены задачи на будущее"@ru ;
                                                  rdfs:label "Установочный доклад АБ"@ru ;
-												 rdfs:comment "Широко описана стратегия дальнейшего развития МП и сообщества, описаны проблемы и нерешенные вопросы, а также решения. Приведены также примеры ментальных оснований ментологов, поставлены задачи на будущее"@ru ;
                                                  rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=524> .
 
 
@@ -1772,14 +2226,14 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/vseHotyatSchastya
 <http://system.mentolog.org/resources/vseHotyatSchastya> rdf:type owl:NamedIndividual ,
                                                                   <http://system.mentolog.org/classes/Ustanovka> ;
-                                                         <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPrirodnosti> ,
-                                                                                                          <http://system.mentolog.org/resources/kontekstVygody> ;
                                                          <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/pravilno> ;
                                                          <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/bytZhenshchinoj> ,
                                                                                                               <http://system.mentolog.org/resources/estestvenno> ,
                                                                                                               <http://system.mentolog.org/resources/hotyatLuchshego> ,
                                                                                                               <http://system.mentolog.org/resources/lyudejNuzhnoLyubit> ,
                                                                                                               <http://system.mentolog.org/resources/prosto> ;
+                                                         <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstPrirodnosti> ,
+                                                                                                          <http://system.mentolog.org/resources/kontekstVygody> ;
                                                          <http://system.mentolog.org/properties/rechovka> "Живи «здесь и сейчас»"@ru ,
                                                                                                           "Кому счастье служит, тот ни о чем не тужит"@ru ,
                                                                                                           "Не ищи мудрости, ищи простоты"@ru ,
@@ -1798,7 +2252,6 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 ###  http://system.mentolog.org/resources/vsemSvoboda
 <http://system.mentolog.org/resources/vsemSvoboda> rdf:type owl:NamedIndividual ,
                                                             <http://system.mentolog.org/classes/Ustanovka> ;
-                                                   <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstSvobody> ;
                                                    <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/estSmysl> ,
                                                                                                          <http://system.mentolog.org/resources/pravilno> ,
                                                                                                          <http://system.mentolog.org/resources/predel> ;
@@ -1807,6 +2260,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                         <http://system.mentolog.org/resources/bytSoboj> ,
                                                                                                         <http://system.mentolog.org/resources/dvizhenie> ,
                                                                                                         <http://system.mentolog.org/resources/poMoemu> ;
+                                                   <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstSvobody> ;
                                                    <http://system.mentolog.org/properties/rechovka> "Вольному воробью и соловей в клетке завидует"@ru ,
                                                                                                     "Никто никому ничего не должен"@ru ,
                                                                                                     "Правила существуют, чтобы их нарушать"@ru ,
@@ -1815,10 +2269,20 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                    rdfs:label "Всем нужна свобода"@ru .
 
 
+###  http://system.mentolog.org/resources/vtorayaKonferenciyaKakTochkaOtschetaPerioda
+<http://system.mentolog.org/resources/vtorayaKonferenciyaKakTochkaOtschetaPerioda> rdf:type owl:NamedIndividual ,
+                                                                                            <http://system.mentolog.org/classes/Text> ;
+                                                                                   <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/konferentsii> ,
+                                                                                                                                 <http://system.mentolog.org/resources/neReshVoprosy> ,
+                                                                                                                                 <http://system.mentolog.org/resources/problemy> ,
+                                                                                                                                 <http://system.mentolog.org/resources/rezultatyAnaliza> ;
+                                                                                   rdfs:label "Вторая конференция как точка отсчета периода"@ru ;
+                                                                                   rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=242#p1236> .
+
+
 ###  http://system.mentolog.org/resources/vysshee
 <http://system.mentolog.org/resources/vysshee> rdf:type owl:NamedIndividual ,
                                                         <http://system.mentolog.org/classes/Ustanovka> ;
-                                               <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstVysshego> ;
                                                <http://system.mentolog.org/properties/protivorechit> <http://system.mentolog.org/resources/dvizhenie> ;
                                                <http://system.mentolog.org/properties/sochetaetsya> <http://system.mentolog.org/resources/estPrichina> ,
                                                                                                     <http://system.mentolog.org/resources/estSmysl> ,
@@ -1828,6 +2292,7 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                     <http://system.mentolog.org/resources/posleSmertiChto-toEst> ,
                                                                                                     <http://system.mentolog.org/resources/spravedlivost> ,
                                                                                                     <http://system.mentolog.org/resources/svyazano> ;
+                                               <http://system.mentolog.org/properties/kontekst> <http://system.mentolog.org/resources/kontekstVysshego> ;
                                                <http://system.mentolog.org/properties/rechovka> "Бог не Тимошка - видит немножко"@ru ,
                                                                                                 "Все под богом ходим"@ru ,
                                                                                                 "От судьбы не уйдешь"@ru ,
@@ -1865,10 +2330,13 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                <http://system.mentolog.org/properties/text> <http://system.mentolog.org/resources/AT_17_09_14> ,
                                                                                             <http://system.mentolog.org/resources/AT_24_03_17> ,
                                                                                             <http://system.mentolog.org/resources/osnZadachiTransfera> ,
+                                                                                            <http://system.mentolog.org/resources/razvitieMPvRusskomMireZaPredelamiRFprimenenieProdvizhenie> ,
                                                                                             <http://system.mentolog.org/resources/schemyUstDoklada> ,
+                                                                                            <http://system.mentolog.org/resources/tekhnologizaciyaObrazovaniyaVmestoTekhnologizaciiMP> ,
                                                                                             <http://system.mentolog.org/resources/ustDoklad> ,
                                                                                             <http://system.mentolog.org/resources/zadachiIzdoklada1_0_1> ,
-                                                                                            <http://system.mentolog.org/resources/zadachiIzdoklada1_1> ;
+                                                                                            <http://system.mentolog.org/resources/zadachiIzdoklada1_1> ,
+                                                                                            <http://system.mentolog.org/resources/zadachiSpecializaciiMP> ;
                                                rdfs:label "Задачи"@ru .
 
 
@@ -1888,6 +2356,15 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
                                                                                                          <http://system.mentolog.org/resources/zadachi> ;
                                                            rdfs:label "Задачи из доклада 1.1"@ru ;
                                                            rdfs:seeAlso <http://mentally.eu/forum/download/file.php?id=536> .
+
+
+###  http://system.mentolog.org/resources/zadachiSpecializaciiMP
+<http://system.mentolog.org/resources/zadachiSpecializaciiMP> rdf:type owl:NamedIndividual ,
+                                                                       <http://system.mentolog.org/classes/Text> ;
+                                                              <http://system.mentolog.org/properties/topic> <http://system.mentolog.org/resources/neReshVoprosy> ,
+                                                                                                            <http://system.mentolog.org/resources/zadachi> ;
+                                                              rdfs:label "Задачи специализации ментального подхода"@ru ;
+                                                              rdfs:seeAlso <http://mentally.eu/forum/viewtopic.php?f=39&t=242#p1256> .
 
 
 ###  http://system.mentolog.org/resources/zavisimostOtLyudej
@@ -1914,6 +2391,9 @@ rdfs:seeAlso rdfs:label "Ссылка"@ru .
 #################################################################
 #    Annotations
 #################################################################
+
+<http://system.mentolog.org/properties/prichina> rdfs:label "Имеет причиной"@ru .
+
 
 rdf:type rdfs:label "Тип"@ru .
 
